@@ -1,7 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 
-@theme{
-    --color-medium-blue: #00598A;
-    --font-title-size-desktop: 3rem;
-    --shadow-blue-shadow: 0px 10px 10px 0px rgba(200,228,245,1);
+@theme {
+  --color-medium-blue: #00598a;
+  --color-white: #fff;
+  --color-description-texts: rgba(26, 30, 45, 0.85);
+  --font-inter: "Inter", sans-serif;
+  --font-inria: "Inria Sans", sans-serif;
+  --font-title-size-desktop: 3rem;
+  --shadow-blue-shadow: 0px 10px 10px 0px rgba(200, 228, 245, 1);
 }
