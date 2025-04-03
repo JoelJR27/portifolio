@@ -1,4 +1,4 @@
-import ButtonsContainer from "./ButtonsContainer";
+import ButtonContainer from "../CardButtonsContainer";
 function ProjectCard({ title, imageUrl, description }) {
   return (
     <li className="bg-white rounded-lg shadow-blue-shadow flex flex-col">
@@ -8,9 +8,9 @@ function ProjectCard({ title, imageUrl, description }) {
         alt="Project preview"
       />
       <div className="p-4">
-        <h2 className="font-medium text-medium-blue">{title}</h2>
+        <h2 className="font-medium text-sky-950">{title}</h2>
         <p className="text-sm text-description-texts pt-1">{description}</p>
-        <ButtonsContainer />
+        <ButtonContainer />
       </div>
     </li>
   );

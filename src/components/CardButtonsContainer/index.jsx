@@ -1,12 +1,12 @@
-import Button from "./Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import CardButton from "./CardButtons";
+
 function ButtonContainer() {
   return (
     <div className="my-5 grid gap-4">
-      <Button buttonText={"Ver projeto"} iconName={faUpRightFromSquare}/>
-      <Button buttonText={"Github"} iconName={faGithub} />
+      <CardButton buttonText={"Ver projeto"} iconName={faUpRightFromSquare} />
+      <CardButton buttonText={"Ver no Github"} iconName={faGithub} />
     </div>
   );
 }
