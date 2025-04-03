@@ -12,9 +12,9 @@ import {
 import {
   faCode,
   faGear,
-  faUser,
+  // faUser,
   faWind,
-  faCloud
+  faCloud,
 } from "@fortawesome/free-solid-svg-icons";
 function SkillsContainer() {
   return (
@@ -72,28 +72,30 @@ function SkillsContainer() {
           },
         ]}
       />
-      <SkillCard
-        skillName="Soft Skills"
-        skillIcon={faUser}
-        skills={[
-          {
-            skillName: "HTML",
-            icon: faHtml5,
-          },
-          {
-            skillName: "CSS",
-            icon: faCss3Alt,
-          },
-          {
-            skillName: "JavaScript",
-            icon: faJs,
-          },
-          {
-            skillName: "React",
-            icon: faReact,
-          },
-        ]}
-      />
+      {
+        // <SkillCard}
+        //   skillName="Soft Skills"
+        //   skillIcon={faUser}
+        //   skills={[
+        //     {
+        //       skillName: "HTML",
+        //       icon: faHtml5,
+        //     },
+        //     {
+        //       skillName: "CSS",
+        //       icon: faCss3Alt,
+        //     },
+        //     {
+        //       skillName: "JavaScript",
+        //       icon: faJs,
+        //     },
+        //     {
+        //       skillName: "React",
+        //       icon: faReact,
+        //     },
+        //   ]}
+        // />
+      }
     </section>
   );
 }
