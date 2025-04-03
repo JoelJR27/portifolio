@@ -22,8 +22,8 @@ function ProjectsContainer() {
   ];
   return (
     <section className="py-25" id="projects">
-      <h2 className="text-xl text-medium-blue font-bold mb-8">Projetos</h2>
-      <ul className="grid grid-cols-1 gap-12">
+      <h2 className="text-xl text-medium-blue font-bold mb-8 sm:text-2xl">Projetos</h2>
+      <ul className="grid grid-cols-1 gap-12 sm:max-w-5/6 sm:mx-auto">
         {projects.map((project) => (
           <ProjectCard
             key={project.title}

@@ -1,7 +1,7 @@
 import HeaderButton from "./HeaderButton"
 function Header (){
     return(
-        <header className="p-6 shadow-blue-shadow sticky top-0 bg-white">
+        <header className="px-3 py-6 shadow-blue-shadow sticky top-0 bg-white sm:p-5">
             <nav>
                 <ul className="flex justify-around gap-2">
                     <HeaderButton href={"#joel"}>Joel Júnior</HeaderButton>

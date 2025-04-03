@@ -8,11 +8,11 @@ function ProjectCard({ title, imageUrl, description, projectLink, link }) {
       <img
         className="w-full rounded-t-lg"
         src={imageUrl}
-        alt="Project preview"
+        alt={`${title} preview`}
       />
       <div className="p-4">
-        <h2 className="font-medium text-sky-950">{title}</h2>
-        <p className="text-sm text-description-texts pt-1">{description}</p>
+        <h2 className="font-medium text-sky-950 sm:text-xl">{title}</h2>
+        <p className="text-sm text-description-texts pt-1 sm:text-base">{description}</p>
         <CardButton url={link} buttonText={"Ver projeto"} iconName={faUpRightFromSquare} />
         <CardButton url={projectLink} buttonText={"Ver no Github"} iconName={faGithub} />
       </div>
