@@ -4,9 +4,9 @@ function Header (){
         <header className="p-6 shadow-blue-shadow sticky top-0 bg-white">
             <nav>
                 <ul className="flex justify-around gap-2">
-                    <HeaderButton >Joel Júnior</HeaderButton>
+                    <HeaderButton href={"#joel"}>Joel Júnior</HeaderButton>
                     <HeaderButton href={"#projects"}>Projetos</HeaderButton>
-                    <HeaderButton>Contatos</HeaderButton>
+                    <HeaderButton href={"#contacts"}>Contatos</HeaderButton>
                 </ul>
             </nav>
         </header>
