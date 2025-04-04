@@ -61,8 +61,8 @@ function Footer() {
               </button>
             </li>
           </ul>
-          <p className="whitespace-pre-wrap">
-            ©2025 - Desenvolvido por
+          <p>
+            ©2025 - Desenvolvido por 
             <span className="font-bold text-medium-blue">Joel Junior</span>.
           </p>
         </li>
