@@ -62,8 +62,7 @@ function Footer() {
             </li>
           </ul>
           <p>
-            ©2025 - Desenvolvido por 
-            <span className="font-bold text-medium-blue">Joel Junior</span>.
+            ©2025 - Desenvolvido por <strong className="font-bold text-medium-blue">Joel Junior</strong>.
           </p>
         </li>
         <li>
