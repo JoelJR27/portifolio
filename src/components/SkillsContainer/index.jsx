@@ -20,8 +20,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 function SkillsContainer() {
   return (
-    <section>
-      <h2 className="text-xl text-medium-blue font-bold mb-8">Skills</h2>
+    <section className="py-25">
+      <h2 className="text-xl text-medium-blue font-bold mb-8 sm:text-2xl lg:text-3xl lg:text-center">Skills</h2>
       <SkillCard
         skillName="Desenvolvimento"
         skillIcon={faCode}

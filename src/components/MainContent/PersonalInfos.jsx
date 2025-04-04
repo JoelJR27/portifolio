@@ -9,7 +9,7 @@ function PersonalInfos() {
       <h1 className=" font-bold italic mt-5 text-medium-blue font-inria sm:text-3xl">
         Desenvolvedor Front End
       </h1>
-      <p className="text-xs font-inter text-description-texts font-bold mb-4 sm:text-sm sm:px-8">
+      <p className="text-xs font-inter text-description-texts font-bold mb-4 sm:text-sm sm:px-8 lg:max-w-1/2">
         Apaixonado por criar interfaces interativas, dinâmicas e responsivas.
         Estou em busca de uma oportunidade de estágio para não apenas aprimorar
         minhas habilidades técnicas, mas também para contribuir com soluções

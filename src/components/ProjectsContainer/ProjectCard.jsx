@@ -11,7 +11,7 @@ function ProjectCard({ title, imageUrl, description, projectLink, link }) {
         alt={`${title} preview`}
       />
       <div className="p-4">
-        <h2 className="font-medium text-sky-950 sm:text-xl">{title}</h2>
+        <h2 className="font-medium text-sky-950 sm:text-xl lg:text-2xl">{title}</h2>
         <p className="text-sm text-description-texts pt-1 sm:text-base">{description}</p>
         <CardButton url={link} buttonText={"Ver projeto"} iconName={faUpRightFromSquare} />
         <CardButton url={projectLink} buttonText={"Ver no Github"} iconName={faGithub} />

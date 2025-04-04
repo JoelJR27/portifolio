@@ -24,7 +24,7 @@ function Footer() {
       className="border-t border-medium-blue p-8 font-inter mx-5 relative"
       id="contacts"
     >
-      <ul className="flex flex-col gap-4">
+      <ul className="flex flex-col gap-4 lg:flex-row lg:justify-around">
         <li>
           <h3
             className="font-bold text-xl text-medium-blue hover:opacity-90 hover:underline decoration-sky-300 cursor-pointer"
@@ -53,13 +53,18 @@ function Footer() {
               </a>
             </li>
             <li>
-              <button 
-              onClick={emailPopup}
-              className="hover:text-neutral-800 cursor-pointer">
+              <button
+                onClick={emailPopup}
+                className="hover:text-neutral-800 cursor-pointer"
+              >
                 <FontAwesomeIcon icon={faEnvelope} />
               </button>
             </li>
           </ul>
+          <p className="whitespace-pre-wrap">
+            ©2025 - Desenvolvido por
+            <span className="font-bold text-medium-blue">Joel Junior</span>.
+          </p>
         </li>
         <li>
           <h3 className="font-bold text-xl text-medium-blue">Contatos</h3>
@@ -73,12 +78,9 @@ function Footer() {
           </a>
         </li>
       </ul>
-      <p className="whitespace-pre-wrap">
-        ©2025 - Desenvolvido por <span className="font-bold text-medium-blue">Joel Junior</span>.
-      </p>
       <div
         id="email-pop-up"
-        className=" bg-medium-blue sticky left-5/6 bottom-30 rounded-lg inline-block opacity-0 invisible transition-all ease-in-out"
+        className=" bg-medium-blue sticky mt-4 bottom-0 rounded-lg inline-block  transition-all ease-in-out lg:left-1/2 lg:-translate-x-1/2 invisible opacity-0"
       >
         <p className="text-white p-2 text-sm">Email copiado! 😊</p>
       </div>
