@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///D:/Backup%20SSD/Projetos%20web/portifolio/frontend/src/components/ThemeProvider/index.tsx"],"sourcesContent":["\"use client\"\r\n\r\nimport { ThemeProvider as NextThemesProvider } from \"next-themes\"\r\n\r\nexport function ThemeProvider({\r\n  children,\r\n  ...props\r\n}: React.ComponentProps<typeof NextThemesProvider>) {\r\n  return <NextThemesProvider {...props}>{children}</NextThemesProvider>\r\n}"],"names":[],"mappings":";;;;;AAEA;AAFA;;;AAIO,SAAS,cAAc,EAC5B,QAAQ,EACR,GAAG,OAC6C;IAChD,qBAAO,6WAAC,0QAAkB;QAAE,GAAG,KAAK;kBAAG;;;;;;AACzC","debugId":null}}]
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 43, "column": 0}, "map": {"version":3,"sources":["file:///D:/Backup%20SSD/Projetos%20web/portifolio/frontend/src/app/api/technologies/route.ts"],"sourcesContent":["export async function DELETE(request: Request) {\r\n  const { searchParams } = new URL(request.url);\r\n  console.log(searchParams);\r\n  const id = searchParams.get('id');\r\n\r\n  if (!id) {\r\n    return new Response('ID é obrigatório', { status: 400 });\r\n  }\r\n\r\n  await fetch(`${process.env.API_URL}/technologies/${id}`, {\r\n    method: 'DELETE',\r\n    headers: {\r\n      'Content-Type': 'application/json'\r\n    }\r\n  });\r\n\r\nconsole.log(process.env.API_URL);\r\n  return new Response('Tecnologia deletada com sucesso', { status: 200 });\r\n}"],"names":[],"mappings":";;;;AAAO,eAAe,OAAO,OAAgB;IAC3C,MAAM,EAAE,YAAY,EAAE,GAAG,IAAI,IAAI,QAAQ,GAAG;IAC5C,QAAQ,GAAG,CAAC;IACZ,MAAM,KAAK,aAAa,GAAG,CAAC;IAE5B,IAAI,CAAC,IAAI;QACP,OAAO,IAAI,SAAS,oBAAoB;YAAE,QAAQ;QAAI;IACxD;IAEA,MAAM,MAAM,GAAG,QAAQ,GAAG,CAAC,OAAO,CAAC,cAAc,EAAE,IAAI,EAAE;QACvD,QAAQ;QACR,SAAS;YACP,gBAAgB;QAClB;IACF;IAEF,QAAQ,GAAG,CAAC,QAAQ,GAAG,CAAC,OAAO;IAC7B,OAAO,IAAI,SAAS,mCAAmC;QAAE,QAAQ;IAAI;AACvE","debugId":null}}]
+}

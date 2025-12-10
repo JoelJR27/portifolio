@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 19, "column": 0}, "map": {"version":3,"sources":["file:///D:/Backup%20SSD/Projetos%20web/portifolio/frontend/src/app/%28private%29/admin/page.tsx"],"sourcesContent":["import { Terminal } from 'lucide-react';\r\nimport LogoutButton from './components/LogoutButton';\r\nimport BackToMainPageButton from '@/components/BackToMainPageButton';\r\nimport { ModeToggle } from '@/components/ModeToggle';\r\n\r\nexport default function AdminPage() {\r\n  return (\r\n    <>\r\n      \r\n      <section className=\"h-screen p-16 text-white\">\r\n        <h1 className=\"mb-5 flex items-center gap-4\">\r\n          <span className=\"animate-pulse\">\r\n            <Terminal style={{ color: 'var(--color-primary)' }} size={40} />\r\n          </span>\r\n          OLÁ JOEL!\r\n        </h1>\r\n      </section>\r\n    </>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;AAAA;;;AAKe,SAAS;IACtB,qBACE;kBAEE,cAAA,6WAAC;YAAQ,WAAU;sBACjB,cAAA,6WAAC;gBAAG,WAAU;;kCACZ,6WAAC;wBAAK,WAAU;kCACd,cAAA,6WAAC,0SAAQ;4BAAC,OAAO;gCAAE,OAAO;4BAAuB;4BAAG,MAAM;;;;;;;;;;;oBACrD;;;;;;;;;;;;;AAMjB","debugId":null}}]
+}

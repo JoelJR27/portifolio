@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///D:/Backup%20SSD/Projetos%20web/portifolio/frontend/.next-internal/server/app/%28private%29/admin/page/actions.js%20%28server%20actions%20loader%29"],"sourcesContent":["export {$$RSC_SERVER_ACTION_0 as '005d92aa14ff61df5a387d6995f10681ee3acb07c7'} from 'ACTIONS_MODULE0'\n"],"names":[],"mappings":";AAAA","debugId":null}},
+    {"offset": {"line": 33, "column": 0}, "map": {"version":3,"sources":["file:///D:/Backup%20SSD/Projetos%20web/portifolio/frontend/src/app/%28private%29/admin/components/Table/index.tsx"],"sourcesContent":["interface TableProps {\r\n  title: string;\r\n  children: React.ReactNode;\r\n}\r\n\r\nexport default function Table({ title, children }: TableProps) {\r\n  return (\r\n    <table className=\"flex w-full flex-col gap-4 justify-self-center lg:w-[80%]\">\r\n      <thead className=\"border-b border-b-primary pb-2 text-2xl\">\r\n        <tr>\r\n          <th>{title}</th>\r\n        </tr>\r\n      </thead>\r\n\r\n      <tbody className=\"px-2\">{children}</tbody>\r\n    </table>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;;AAKe,SAAS,MAAM,EAAE,KAAK,EAAE,QAAQ,EAAc;IAC3D,qBACE,6WAAC;QAAM,WAAU;;0BACf,6WAAC;gBAAM,WAAU;0BACf,cAAA,6WAAC;8BACC,cAAA,6WAAC;kCAAI;;;;;;;;;;;;;;;;0BAIT,6WAAC;gBAAM,WAAU;0BAAQ;;;;;;;;;;;;AAG/B","debugId":null}}]
+}
