@@ -4,14 +4,10 @@ import { type ComponentProps } from 'react';
 import { LoaderCircle } from 'lucide-react';
 
 type Props = ComponentProps<'button'> & {
-  pendingText?: string;
+  children: React.ReactNode;
 };
 
-export default function SubmitButton({
-  children,
-  pendingText,
-  ...props
-}: Props) {
+export default function SubmitButton({ children, ...props }: Props) {
   const { pending } = useFormStatus();
 
   return (

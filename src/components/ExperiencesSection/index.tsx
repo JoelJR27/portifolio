@@ -2,10 +2,11 @@ import { BriefcaseBusiness } from 'lucide-react';
 import ExperienceCard from './ExperienceCard';
 import sectionIconsStyles from '@/utils/sectionIconsStyles';
 import { Experience } from '@/types/Experience';
-import useFetchData from '@/hooks/useFetchData';
+import { fetchAllData } from '@/app/actions/fetchAllData';
+
 
 export default async function ExperiencesSection() {
-  const { experiences } = await useFetchData();
+  const { experiences } = await fetchAllData();
   const { data, lastExperience } = experiences;
 
   return (

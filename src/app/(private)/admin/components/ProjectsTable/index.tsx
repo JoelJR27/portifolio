@@ -11,10 +11,11 @@ import { Project } from '@/types/Project';
 import Image from 'next/image';
 import CreateProjectsForm from '../CreateProjectsForm';
 import EditProjectsModal from '../EditProjectsModal';
-import useFetchData from '@/hooks/useFetchData';
+import { fetchAllData } from '@/app/actions/fetchAllData';
+
 
 export default async function ProjectsTable() {
-  const { projects } = await useFetchData();
+  const { projects } = await fetchAllData();
   const { data } = projects;
   return (
     <>

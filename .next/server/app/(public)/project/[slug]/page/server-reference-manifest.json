@@ -1,4 +1,20 @@
 {
-  "node": {},
+  "node": {
+    "0096b249ae8bd9264d09772c094fc08cd93b8b97b1": {
+      "workers": {
+        "app/(public)/project/[slug]/page": {
+          "moduleId": "[project]/.next-internal/server/app/(public)/project/[slug]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions/fetchAllData.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "fetchAllData",
+          "filename": "src/app/actions/fetchAllData.ts"
+        }
+      },
+      "layer": {
+        "app/(public)/project/[slug]/page": "rsc"
+      },
+      "exportedName": "fetchAllData",
+      "filename": "src/app/actions/fetchAllData.ts"
+    }
+  },
   "edge": {}
 }

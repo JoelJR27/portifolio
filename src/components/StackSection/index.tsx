@@ -1,10 +1,10 @@
-import useFetchData from '@/hooks/useFetchData';
+import { fetchAllData } from '@/app/actions/fetchAllData';
 import sectionIconsStyles from '@/utils/sectionIconsStyles';
 import { Globe } from 'lucide-react';
 import Image from 'next/image';
 
 export default async function StackSection() {
-  const { technologies } = await useFetchData();
+  const { technologies } = await fetchAllData();
   const { data } = technologies;
 
   //TODO: fazer animações

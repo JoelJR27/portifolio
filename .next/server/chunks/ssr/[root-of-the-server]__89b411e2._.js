@@ -196,64 +196,59 @@ function ExperienceCard({ experience, isLastExperience }) {
 "[project]/src/hooks/useFetchData.ts [app-rsc] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-__turbopack_context__.s([
-    "default",
-    ()=>useFetchData
-]);
-async function useFetchData() {
-    const baseUrl = process.env.API_URL;
-    const projectsResponse = await fetch(`${baseUrl}/projects`, {
-        next: {
-            tags: [
-                "projects"
-            ]
-        }
-    });
-    const projects = await projectsResponse.json();
-    async function fetchProjectBySlug(slug) {
-        const response = await fetch(`${baseUrl}/projects/${slug}`, {
-            headers: {
-                'Cache-Control': 'no-store',
-                "Content-Type": "application/json"
-            }
-        });
-        const data = await response.json();
-        return data.data;
-    }
-    const experiencesResponse = await fetch(`${baseUrl}/experiences`, {
-        next: {
-            tags: [
-                "experiences"
-            ]
-        }
-    });
-    const experiences = await experiencesResponse.json();
-    const lastExperience = experiences.data.splice(0, 1)[0];
-    const technologiesResponse = await fetch(`${baseUrl}/technologies`, {
-        next: {
-            tags: [
-                "technologies"
-            ]
-        }
-    });
-    const technologies = await technologiesResponse.json();
-    return {
-        projects: {
-            status: projects.status,
-            data: projects.data
-        },
-        fetchProjectBySlug,
-        experiences: {
-            status: experiences.status,
-            data: experiences.data,
-            lastExperience
-        },
-        technologies: {
-            status: technologies.status,
-            data: technologies.data
-        }
-    };
-}
+// import { Experience } from "@/types/Experience"
+// import { FetchResponse } from "@/types/FetchResponse"
+// import { Project } from "@/types/Project"
+// import { Technology } from "@/types/Technology"
+// export default async function fetchAllData() {
+//     const baseUrl = process.env.API_URL!
+//     const projectsResponse = await fetch(`${baseUrl}/projects`, {
+//         next: {
+//             tags: ["projects"]
+//         }
+//     })
+//     const projects: FetchResponse<Project[]> = await projectsResponse.json()
+//     async function fetchProjectBySlug(slug: string) {
+//         const response = await fetch(`${baseUrl}/projects/${slug}`, {
+//             headers: {
+//                 'Cache-Control': 'no-store',
+//                 "Content-Type": "application/json"
+//             }
+//         })
+//         const data = await response.json()
+//         return data.data as Project
+//     }
+//     const experiencesResponse = await fetch(`${baseUrl}/experiences`, {
+//         next: {
+//             tags: ["experiences"]
+//         }
+//     })
+//     const experiences: FetchResponse<Experience[]> = await experiencesResponse.json()
+//     const lastExperience = experiences.data.splice(0, 1)[0];
+//     const technologiesResponse = await fetch(`${baseUrl}/technologies`, {
+//         next: {
+//             tags: ["technologies"]
+//         }
+//     })
+//     const technologies: FetchResponse<Technology[]> = await technologiesResponse.json()
+//     return {
+//         projects: {
+//             status: projects.status,
+//             data: projects.data
+//         },
+//         fetchProjectBySlug,
+//         experiences: {
+//             status: experiences.status,
+//             data: experiences.data,
+//             lastExperience
+//         },
+//         technologies: {
+//             status: technologies.status,
+//             data: technologies.data
+//         }
+//     }
+// }
+__turbopack_context__.s([]);
 }),
 "[project]/src/components/ExperiencesSection/index.tsx [app-rsc] (ecmascript)", ((__turbopack_context__) => {
 "use strict";

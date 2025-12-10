@@ -1,6 +1,6 @@
 "use server"
 
-import {  revalidateTag } from "next/cache"
+import { revalidateTag } from "next/cache"
 
 export async function editProjectAction(formData: FormData, identifier: string) {
     const projectName = formData.get("projectName") as string
@@ -18,7 +18,17 @@ export async function editProjectAction(formData: FormData, identifier: string) 
     const projectImageName = formData.get("projectImageName") as string
 
 
-    const payload: any = {
+    const payload: {
+        projectName?: string,
+        slug?: string,
+        description?: string,
+        projectLink?: string,
+        githubLink?: string,
+        image?: {
+            imageLink?: string,
+            name?: string
+        }
+    } = {
     }
 
     if (projectName && projectName.trim() !== "") {
@@ -50,8 +60,6 @@ export async function editProjectAction(formData: FormData, identifier: string) 
     if (Object.keys(imageData).length > 0) {
         payload.image = imageData;
     }
-
-    console.log("Payload:", payload);
 
     const response = await fetch(`${process.env.API_URL}/projects/${identifier}`, {
         method: "PUT",

@@ -1,10 +1,10 @@
 import ProjectCard from './ProjectCard';
 import { Braces } from 'lucide-react';
 import sectionIconsStyles from '@/utils/sectionIconsStyles';
-import useFetchData from '@/hooks/useFetchData';
+import { fetchAllData } from '@/app/actions/fetchAllData';
 
 export default async function ProjectsSection() {
-  const { projects } = await useFetchData();
+  const { projects } = await fetchAllData();
   const { data } = projects;
 
   //TODO: fazer animações com GSAP

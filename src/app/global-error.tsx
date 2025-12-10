@@ -2,8 +2,6 @@
 
 import BackToMainPageButton from '@/components/BackToMainPageButton';
 import { ThemeProvider } from '@/components/ThemeProvider';
-import { ChevronLeft } from 'lucide-react';
-1;
 interface GlobalErrorProps {
   error: Error;
   reset: () => void;
@@ -24,10 +22,7 @@ export default function GlobalError({ error, reset }: GlobalErrorProps) {
         >
           <main className="p-6">
             <header>
-              <a href="/" className="flex items-center gap-1 text-xl">
-                <ChevronLeft />
-                Início
-              </a>
+              <BackToMainPageButton />
             </header>
             <section className="flex min-h-screen flex-col items-center justify-center bg-white p-4 dark:bg-gray">
               <h1 className="mb-4 text-center font-bold text-gray text-shadow-2xs dark:text-white">

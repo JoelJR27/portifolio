@@ -9,12 +9,13 @@ import {
 } from '@/components/ui/table';
 import { Technology } from '@/types/Technology';
 import Image from 'next/image';
-import useFetchData from '@/hooks/useFetchData';
 import EditTechnologiesModal from '../EditTechnologiesModal';
+import { fetchAllData } from '@/app/actions/fetchAllData';
 
 export default async function TechnologiesTable() {
-  const { technologies } = await useFetchData();
+  const { technologies } = await fetchAllData();
   const { data } = technologies;
+
   return (
     <>
       <Table className="w-full text-gray lg:justify-self-center lg:text-lg 2xl:w-8/10 dark:text-white">

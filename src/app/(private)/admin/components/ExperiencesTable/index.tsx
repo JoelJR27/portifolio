@@ -9,11 +9,11 @@ import {
 } from '@/components/ui/table';
 import { Experience } from '@/types/Experience';
 import dateFormater from '@/utils/dateFormater';
-import useFetchData from '@/hooks/useFetchData';
 import EditExperienceModal from '../EditExperienceModal';
+import { fetchAllData } from '@/app/actions/fetchAllData';
 
 export default async function ExperiencesTable() {
-  const { experiences } = await useFetchData();
+  const { experiences } = await fetchAllData();
   const { data, lastExperience } = experiences;
 
   return (

@@ -1,6 +1,6 @@
+import { fetchAllData } from '@/app/actions/fetchAllData';
 import Loading from '@/app/loading';
 import BackToMainPageButton from '@/components/BackToMainPageButton';
-import useFetchData from '@/hooks/useFetchData';
 import { Technology } from '@/types/Technology';
 import Image from 'next/image';
 import { Suspense } from 'react';
@@ -9,7 +9,7 @@ export default async function ProjectPage({
   params
 }: PageProps<'/project/[slug]'>) {
   const { slug } = await params;
-  const { fetchProjectBySlug } = await useFetchData();
+  const { fetchProjectBySlug } = await fetchAllData();
   const project = await fetchProjectBySlug(slug);
   const { technologies } = project;
 

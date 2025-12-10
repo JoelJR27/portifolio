@@ -1,6 +1,5 @@
 "use server"
 
-import { Technology } from "@/types/Technology";
 import { revalidateTag } from "next/cache";
 
 export async function editTechnology(formData: FormData, identifier: string) {
@@ -8,14 +7,23 @@ export async function editTechnology(formData: FormData, identifier: string) {
     const technologyLogoName = formData.get("technologyLogoName") as string;
     const technologyLogo = formData.get("technologyLogo") as string;
 
-    const payload: Partial<Technology> = {};
+    const payload: {
+        name?: string,
+        logo?: {
+            name?: string,
+            imageLink?: string
+        }
+    } = {};
 
     if (technologyName && technologyName.trim() !== "") {
         payload.name = technologyName;
     }
 
 
-    const logoData: any = {};
+    const logoData: {
+        name?: string,
+        imageLink?: string
+    } = {}
     if (technologyLogoName && technologyLogoName.trim() !== "") {
         logoData.name = technologyLogoName;
     }

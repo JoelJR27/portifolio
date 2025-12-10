@@ -1,124 +1,26 @@
 {
   "node": {
-    "004fafe263d2bba8a287a4a57d900702756d54d05e": {
+    "0096b249ae8bd9264d09772c094fc08cd93b8b97b1": {
       "workers": {
-        "app/(private)/admin/page": {
-          "moduleId": "[project]/.next-internal/server/app/(private)/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/(private)/admin/actions/logout.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/(private)/admin/actions/createTechnology.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/app/(private)/admin/actions/createExperience.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/app/(private)/admin/actions/createProject.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE4 => \"[project]/src/app/(private)/admin/actions/editTechnology.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE5 => \"[project]/src/app/(private)/admin/actions/editProjects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE6 => \"[project]/src/app/(private)/admin/actions/editExperiences.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE7 => \"[project]/src/app/(private)/admin/actions/deleteItem.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+        "app/(public)/page": {
+          "moduleId": "[project]/.next-internal/server/app/(public)/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions/fetchAllData.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
-          "exportedName": "logout",
-          "filename": "src/app/(private)/admin/actions/logout.ts"
+          "exportedName": "fetchAllData",
+          "filename": "src/app/actions/fetchAllData.ts"
+        },
+        "app/(public)/project/[slug]/page": {
+          "moduleId": "[project]/.next-internal/server/app/(public)/project/[slug]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions/fetchAllData.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "fetchAllData",
+          "filename": "src/app/actions/fetchAllData.ts"
         }
       },
       "layer": {
-        "app/(private)/admin/page": "rsc"
+        "app/(public)/page": "rsc",
+        "app/(public)/project/[slug]/page": "rsc"
       },
-      "filename": "src/app/(private)/admin/actions/logout.ts",
-      "exportedName": "logout"
-    },
-    "4083a4b74ab0fd584333b0368ad1d21d01c7a45a40": {
-      "workers": {
-        "app/(private)/admin/page": {
-          "moduleId": "[project]/.next-internal/server/app/(private)/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/(private)/admin/actions/logout.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/(private)/admin/actions/createTechnology.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/app/(private)/admin/actions/createExperience.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/app/(private)/admin/actions/createProject.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE4 => \"[project]/src/app/(private)/admin/actions/editTechnology.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE5 => \"[project]/src/app/(private)/admin/actions/editProjects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE6 => \"[project]/src/app/(private)/admin/actions/editExperiences.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE7 => \"[project]/src/app/(private)/admin/actions/deleteItem.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "createTechnology",
-          "filename": "src/app/(private)/admin/actions/createTechnology.ts"
-        }
-      },
-      "layer": {
-        "app/(private)/admin/page": "rsc"
-      },
-      "filename": "src/app/(private)/admin/actions/createTechnology.ts",
-      "exportedName": "createTechnology"
-    },
-    "407d69b3e3acf05e309538cbd26d89feab0727eb0f": {
-      "workers": {
-        "app/(private)/admin/page": {
-          "moduleId": "[project]/.next-internal/server/app/(private)/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/(private)/admin/actions/logout.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/(private)/admin/actions/createTechnology.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/app/(private)/admin/actions/createExperience.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/app/(private)/admin/actions/createProject.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE4 => \"[project]/src/app/(private)/admin/actions/editTechnology.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE5 => \"[project]/src/app/(private)/admin/actions/editProjects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE6 => \"[project]/src/app/(private)/admin/actions/editExperiences.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE7 => \"[project]/src/app/(private)/admin/actions/deleteItem.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "createExperience",
-          "filename": "src/app/(private)/admin/actions/createExperience.ts"
-        }
-      },
-      "layer": {
-        "app/(private)/admin/page": "rsc"
-      },
-      "filename": "src/app/(private)/admin/actions/createExperience.ts",
-      "exportedName": "createExperience"
-    },
-    "40510c1af89bc1158e0c4415c8012fb65a3d91f888": {
-      "workers": {
-        "app/(private)/admin/page": {
-          "moduleId": "[project]/.next-internal/server/app/(private)/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/(private)/admin/actions/logout.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/(private)/admin/actions/createTechnology.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/app/(private)/admin/actions/createExperience.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/app/(private)/admin/actions/createProject.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE4 => \"[project]/src/app/(private)/admin/actions/editTechnology.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE5 => \"[project]/src/app/(private)/admin/actions/editProjects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE6 => \"[project]/src/app/(private)/admin/actions/editExperiences.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE7 => \"[project]/src/app/(private)/admin/actions/deleteItem.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "createProject",
-          "filename": "src/app/(private)/admin/actions/createProject.ts"
-        }
-      },
-      "layer": {
-        "app/(private)/admin/page": "rsc"
-      },
-      "filename": "src/app/(private)/admin/actions/createProject.ts",
-      "exportedName": "createProject"
-    },
-    "609385d6549969accc031438bcc18eadf3b7c1bbd4": {
-      "workers": {
-        "app/(private)/admin/page": {
-          "moduleId": "[project]/.next-internal/server/app/(private)/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/(private)/admin/actions/logout.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/(private)/admin/actions/createTechnology.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/app/(private)/admin/actions/createExperience.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/app/(private)/admin/actions/createProject.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE4 => \"[project]/src/app/(private)/admin/actions/editTechnology.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE5 => \"[project]/src/app/(private)/admin/actions/editProjects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE6 => \"[project]/src/app/(private)/admin/actions/editExperiences.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE7 => \"[project]/src/app/(private)/admin/actions/deleteItem.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "editTechnology",
-          "filename": "src/app/(private)/admin/actions/editTechnology.ts"
-        }
-      },
-      "layer": {
-        "app/(private)/admin/page": "action-browser"
-      },
-      "filename": "src/app/(private)/admin/actions/editTechnology.ts",
-      "exportedName": "editTechnology"
-    },
-    "60fb5325fe776fc99ed2bf1f962ebbf9f285b45eaf": {
-      "workers": {
-        "app/(private)/admin/page": {
-          "moduleId": "[project]/.next-internal/server/app/(private)/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/(private)/admin/actions/logout.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/(private)/admin/actions/createTechnology.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/app/(private)/admin/actions/createExperience.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/app/(private)/admin/actions/createProject.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE4 => \"[project]/src/app/(private)/admin/actions/editTechnology.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE5 => \"[project]/src/app/(private)/admin/actions/editProjects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE6 => \"[project]/src/app/(private)/admin/actions/editExperiences.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE7 => \"[project]/src/app/(private)/admin/actions/deleteItem.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "editProjectAction",
-          "filename": "src/app/(private)/admin/actions/editProjects.ts"
-        }
-      },
-      "layer": {
-        "app/(private)/admin/page": "action-browser"
-      },
-      "filename": "src/app/(private)/admin/actions/editProjects.ts",
-      "exportedName": "editProjectAction"
-    },
-    "606ff783e4fc106a185c2c74d84f9c147a80b73484": {
-      "workers": {
-        "app/(private)/admin/page": {
-          "moduleId": "[project]/.next-internal/server/app/(private)/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/(private)/admin/actions/logout.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/(private)/admin/actions/createTechnology.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/app/(private)/admin/actions/createExperience.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/app/(private)/admin/actions/createProject.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE4 => \"[project]/src/app/(private)/admin/actions/editTechnology.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE5 => \"[project]/src/app/(private)/admin/actions/editProjects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE6 => \"[project]/src/app/(private)/admin/actions/editExperiences.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE7 => \"[project]/src/app/(private)/admin/actions/deleteItem.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "editExperience",
-          "filename": "src/app/(private)/admin/actions/editExperiences.ts"
-        }
-      },
-      "layer": {
-        "app/(private)/admin/page": "action-browser"
-      },
-      "filename": "src/app/(private)/admin/actions/editExperiences.ts",
-      "exportedName": "editExperience"
-    },
-    "70f9112d76d184886a2fcb6ff59981dc7dd0796940": {
-      "workers": {
-        "app/(private)/admin/page": {
-          "moduleId": "[project]/.next-internal/server/app/(private)/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/(private)/admin/actions/logout.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/(private)/admin/actions/createTechnology.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/app/(private)/admin/actions/createExperience.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/app/(private)/admin/actions/createProject.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE4 => \"[project]/src/app/(private)/admin/actions/editTechnology.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE5 => \"[project]/src/app/(private)/admin/actions/editProjects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE6 => \"[project]/src/app/(private)/admin/actions/editExperiences.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE7 => \"[project]/src/app/(private)/admin/actions/deleteItem.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "deleteItem",
-          "filename": "src/app/(private)/admin/actions/deleteItem.ts"
-        }
-      },
-      "layer": {
-        "app/(private)/admin/page": "action-browser"
-      },
-      "filename": "src/app/(private)/admin/actions/deleteItem.ts",
-      "exportedName": "deleteItem"
+      "filename": "src/app/actions/fetchAllData.ts",
+      "exportedName": "fetchAllData"
     }
   },
   "edge": {},

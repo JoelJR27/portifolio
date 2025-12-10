@@ -1,7 +1,4 @@
 {
-  "/(private)/admin/page": "app/(private)/admin/page.js",
-  "/(private)/login/page": "app/(private)/login/page.js",
   "/(public)/page": "app/(public)/page.js",
-  "/(public)/project/[slug]/page": "app/(public)/project/[slug]/page.js",
-  "/api/login/route": "app/api/login/route.js"
+  "/(public)/project/[slug]/page": "app/(public)/project/[slug]/page.js"
 }
