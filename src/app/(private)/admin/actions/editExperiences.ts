@@ -26,7 +26,7 @@ export async function editExperience(formData: FormData, identifier: string) {
 
     if (finishedAt !== "") payload.finishedAt = new Date(finishedAt)
 
-    const response = await fetch(`${baseUrl}/experiences/${identifier}`, {
+    await fetch(`${baseUrl}/experiences/${identifier}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"

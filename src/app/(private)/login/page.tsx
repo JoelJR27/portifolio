@@ -7,7 +7,7 @@ import SubmitButton from './components/SubmitButton';
 export default function LoginPage() {
   return (
     <section className="flex h-screen flex-col items-center justify-center text-white">
-      <h1 className="py-4 text-h1 text-gray text-center dark:text-white">
+      <h1 className="py-4 text-center text-h1 text-gray dark:text-white">
         Login administrador
       </h1>
       <Form>
@@ -17,11 +17,11 @@ export default function LoginPage() {
           type="email"
           autoComplete="email"
           autoFocus={true}
-          placeholder='exemplo@email.com'
+          placeholder="exemplo@email.com"
         />
         <Label htmlFor="password">Senha:</Label>
         <InputPassword />
-        <SubmitButton pendingText="Enviando">Entrar</SubmitButton>
+        <SubmitButton>Entrar</SubmitButton>
       </Form>
     </section>
   );
