@@ -24,7 +24,7 @@ export async function createProject(formData: FormData) {
         .map((tech) => tech.trim())
         .filter((tech) => tech !== '');
 
-    const response = await fetch(`${process.env.API_URL}/projects`, {
+   await fetch(`${process.env.API_URL}/projects`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

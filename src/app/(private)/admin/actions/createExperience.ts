@@ -12,7 +12,7 @@ export async function createExperience(formData: FormData) {
 
     const finishedAt = new Date(formData.get("finishedAt") as string)
 
-    const response = await fetch(`${process.env.API_URL}/experiences`, {
+    await fetch(`${process.env.API_URL}/experiences`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

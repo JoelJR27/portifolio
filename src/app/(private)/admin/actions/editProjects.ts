@@ -47,7 +47,10 @@ export async function editProjectAction(formData: FormData, identifier: string) 
         payload['githubLink'] = githubLink
     }
 
-    const imageData: any = {}
+    const imageData: {
+        name?: string
+        imageLink?: string,
+    } = {}
 
     if (imageLink && imageLink.trim() !== "") {
         imageData.imageLink = imageLink
@@ -61,7 +64,7 @@ export async function editProjectAction(formData: FormData, identifier: string) 
         payload.image = imageData;
     }
 
-    const response = await fetch(`${process.env.API_URL}/projects/${identifier}`, {
+    await fetch(`${process.env.API_URL}/projects/${identifier}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",

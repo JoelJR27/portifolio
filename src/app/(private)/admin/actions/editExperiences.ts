@@ -11,7 +11,6 @@ export async function editExperience(formData: FormData, identifier: string) {
         startedAt?: Date,
         finishedAt?: Date
     } = {}
-    console.log(formData)
 
     const title = formData.get("title") as string
 
@@ -35,8 +34,6 @@ export async function editExperience(formData: FormData, identifier: string) {
         body: JSON.stringify(payload)
 
     })
-
-    const data = await response.json()
 
     revalidateTag("experiences")
 }
