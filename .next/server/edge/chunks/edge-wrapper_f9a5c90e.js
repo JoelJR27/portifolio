@@ -1,3 +1,3 @@
-(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["chunks/edge-wrapper_f9a5c90e.js",23229,(e,t,h)=>{self._ENTRIES||={};let l=Promise.resolve().then(()=>e.i(62019));l.catch(()=>{}),self._ENTRIES.middleware_middleware=new Proxy(l,{get(e,t){if("then"===t)return(t,h)=>e.then(t,h);let h=(...h)=>e.then(e=>(0,e[t])(...h));return h.then=(h,l)=>e.then(e=>e[t]).then(h,l),h}})}]);
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["chunks/edge-wrapper_f9a5c90e.js",23229,e=>{"use strict";e.s([]),self._ENTRIES||={};let t=Promise.resolve().then(()=>e.i(62019));t.catch(()=>{}),self._ENTRIES.middleware_middleware=new Proxy(t,{get(e,t){if("then"===t)return(t,h)=>e.then(t,h);let h=(...h)=>e.then(e=>(0,e[t])(...h));return h.then=(h,r)=>e.then(e=>e[t]).then(h,r),h}})}]);
 
 //# sourceMappingURL=edge-wrapper_f9a5c90e.js.map

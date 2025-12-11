@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
-    {"offset": {"line": 43, "column": 0}, "map": {"version":3,"sources":["file:///D:/Backup%20SSD/Projetos%20web/portifolio/frontend/src/app/api/login/route.ts"],"sourcesContent":["import { NextRequest, NextResponse } from \"next/server\";\r\n\r\nexport async function POST(request: NextRequest) {\r\n\r\n\r\n    console.log(request?.body)\r\n\r\n    // const res = fetch(\"https://api-portifolio-production.up.railway.app/login\", {\r\n    //     method: \"POST\",\r\n    //     headers: {\r\n    //         \"Content-Type\": \"application/json\",\r\n    //     },\r\n    //     credentials: \"include\",\r\n    //     mode: \"cors\",\r\n    //     body: JSON.stringify(request.body)\r\n    // })\r\n\r\n    // const data = (await res).json()\r\n\r\n    // return NextResponse.json({\r\n    //     data\r\n    // })\r\n}"],"names":[],"mappings":";;;;AAEO,eAAe,KAAK,OAAoB;IAG3C,QAAQ,GAAG,CAAC,SAAS;AAErB,gFAAgF;AAChF,sBAAsB;AACtB,iBAAiB;AACjB,8CAA8C;AAC9C,SAAS;AACT,8BAA8B;AAC9B,oBAAoB;AACpB,yCAAyC;AACzC,KAAK;AAEL,kCAAkC;AAElC,6BAA6B;AAC7B,WAAW;AACX,KAAK;AACT","debugId":null}}]
-}

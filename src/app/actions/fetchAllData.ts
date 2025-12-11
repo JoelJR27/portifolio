@@ -35,7 +35,8 @@ export async function fetchAllData() {
         }
     })
     const experiences: FetchResponse<Experience[]> = await experiencesResponse.json()
-    const lastExperience = experiences.data.splice(0, 1)[0];
+    const expList = Array.isArray(experiences.data) ? [...experiences.data] : [];
+    const lastExperience = expList.length > 0 ? expList.splice(0, 1)[0] : null;
 
     const technologiesResponse = await fetch(`${baseUrl}/technologies`, {
         next: {

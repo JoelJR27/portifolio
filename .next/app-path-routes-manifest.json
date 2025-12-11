@@ -2,5 +2,8 @@
   "/(private)/admin/page": "/admin",
   "/(private)/login/page": "/login",
   "/(public)/page": "/",
-  "/_not-found/page": "/_not-found"
+  "/(public)/project/[slug]/page": "/project/[slug]",
+  "/_not-found/page": "/_not-found",
+  "/api/login/route": "/api/login",
+  "/api/technologies/route": "/api/technologies"
 }

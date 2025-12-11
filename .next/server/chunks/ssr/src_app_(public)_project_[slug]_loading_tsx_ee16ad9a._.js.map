@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///D:/Backup%20SSD/Projetos%20web/portifolio/frontend/src/app/%28public%29/project/%5Bslug%5D/loading.tsx"],"sourcesContent":["export default function LoadingProject() {\r\n  return (\r\n    <main className=\"flex h-screen items-center justify-center\">\r\n      <h1>Carregando projeto...</h1>\r\n    </main>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,6WAAC;QAAK,WAAU;kBACd,cAAA,6WAAC;sBAAG;;;;;;;;;;;AAGV","debugId":null}}]
-}

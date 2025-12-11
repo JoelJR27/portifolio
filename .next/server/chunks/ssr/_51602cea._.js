@@ -1,3 +1,0 @@
-module.exports=[42616,(a,b,c)=>{b.exports=a.r(21595)},77196,a=>{"use strict";a.s(["default",()=>e],77196);var b=a.i(62136),c=a.i(42616);async function d(a){let b=a.get("email"),d=a.get("password");if(!(await fetch("https://api-portifolio-production.up.railway.app/login",{method:"POST",headers:{"Content-Type":"application/json"},credentials:"include",mode:"cors",body:JSON.stringify({email:b,password:d})})).ok)return{error:"Credenciais inválidas. Tente novamente."};(0,c.redirect)("/admin")}function e({children:a}){let c=async a=>{await d(a)};return(0,b.jsx)("form",{action:c,className:"flex flex-col gap-4",children:a})}}];
-
-//# sourceMappingURL=_51602cea._.js.map

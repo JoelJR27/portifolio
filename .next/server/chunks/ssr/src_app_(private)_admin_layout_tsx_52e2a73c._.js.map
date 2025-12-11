@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///D:/Backup%20SSD/Projetos%20web/portifolio/frontend/src/app/%28private%29/admin/layout.tsx"],"sourcesContent":["export default function AdminLayout({\r\n  children\r\n}: Readonly<{\r\n  children: React.ReactNode;\r\n}>) {\r\n  return (\r\n    <>\r\n    <header className=\"bg-dark-gray border-b border-b-stone-600 px-8 py-4\">\r\n        <nav className=\"flex items-center justify-between\">\r\n          <span className=\"flex items-center\">\r\n            <BackToMainPageButton />\r\n          </span>\r\n          <span className=\"flex items-center gap-4\">\r\n            <ModeToggle />\r\n            <LogoutButton />\r\n          </span>\r\n        </nav>\r\n      </header>\r\n      <main className=\"h-screen w-full bg-white dark:bg-gray\">{children}</main>\r\n    </>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;;AAAe,SAAS,YAAY,EAClC,QAAQ,EAGR;IACA,qBACE;;0BACA,6WAAC;gBAAO,WAAU;0BACd,cAAA,6WAAC;oBAAI,WAAU;;sCACb,6WAAC;4BAAK,WAAU;sCACd,cAAA,6WAAC;;;;;;;;;;sCAEH,6WAAC;4BAAK,WAAU;;8CACd,6WAAC;;;;;8CACD,6WAAC;;;;;;;;;;;;;;;;;;;;;;0BAIP,6WAAC;gBAAK,WAAU;0BAAyC;;;;;;;;AAG/D","debugId":null}}]
-}

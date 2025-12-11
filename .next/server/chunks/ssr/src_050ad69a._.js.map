@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///D:/Backup%20SSD/Projetos%20web/portifolio/frontend/src/components/Header/index.tsx"],"sourcesContent":["interface HeaderProps {\r\n    children?: React.ReactNode\r\n}\r\nexport default function Header({ children }: HeaderProps) {\r\n    return (\r\n        <header className=\"fixed top-0 left-0 right-0 z-50 bg-transparent-backgroun/80 backdrop-blur-sm border-b\">\r\n            {children}\r\n        </header>\r\n    )\r\n}\r\n"],"names":[],"mappings":";;;;;;AAGe,SAAS,OAAO,EAAE,QAAQ,EAAe;IACpD,qBACI,6WAAC;QAAO,WAAU;kBACb;;;;;;AAGb","debugId":null}},
-    {"offset": {"line": 24, "column": 0}, "map": {"version":3,"sources":["file:///D:/Backup%20SSD/Projetos%20web/portifolio/frontend/src/app/%28private%29/admin/layout.tsx"],"sourcesContent":["import Header from '@/components/Header'\r\n\r\nexport default function AdminLayout({\r\n    children,\r\n}: Readonly<{\r\n    children: React.ReactNode\r\n}>) {\r\n    return (\r\n        <>\r\n            <Header>\r\n                <h1 className=\"text-2xl font-bold p-4\">Admin - Meu Portfólio</h1>\r\n            </Header>\r\n            <main className=\"bg-gray h-screen\">{children}</main>\r\n        </>\r\n    )\r\n}\r\n"],"names":[],"mappings":";;;;;AAAA;;;AAEe,SAAS,YAAY,EAChC,QAAQ,EAGV;IACE,qBACI;;0BACI,6WAAC,gJAAM;0BACH,cAAA,6WAAC;oBAAG,WAAU;8BAAyB;;;;;;;;;;;0BAE3C,6WAAC;gBAAK,WAAU;0BAAoB;;;;;;;;AAGhD","debugId":null}}]
-}
