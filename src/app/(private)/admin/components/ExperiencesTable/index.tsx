@@ -34,24 +34,30 @@ export default async function ExperiencesTable() {
           <TableRow>
             <TableCell className="w-[100px] lg:w-[200px]">
               <h3 className="text-sm font-semibold text-wrap text-gray lg:text-lg dark:text-white">
-                {lastExperience?.title || 'Sem título'}
+                {lastExperience?.title ? lastExperience.title : 'Sem título'}
               </h3>
             </TableCell>
             <TableCell className="max-w-[100px]">
               <p className="text-small text-wrap">
-                {lastExperience?.description || 'Sem descrição'}
+                {lastExperience?.description
+                  ? lastExperience.description
+                  : 'Sem descrição'}
               </p>
             </TableCell>
             <TableCell className="max-w-[100px]">
               <p className="text-wrap">
-                {dateFormater(lastExperience?.startedAt!) || 'Sem data'}
+                {lastExperience?.startedAt
+                  ? dateFormater(lastExperience.startedAt)
+                  : 'Sem data'}
               </p>
             </TableCell>
             <TableCell className="max-w-[100px]">
               <p className="text-wrap">Presente</p>
             </TableCell>
             <TableCell className="w-[50px]">
-              <EditExperienceModal identifier={lastExperience?.id! || ''} />
+              {lastExperience && (
+                <EditExperienceModal identifier={lastExperience.id} />
+              )}
             </TableCell>
           </TableRow>
           {data &&
@@ -62,26 +68,36 @@ export default async function ExperiencesTable() {
               >
                 <TableCell className="w-[100px] lg:w-[200px]">
                   <h3 className="text-sm font-semibold text-wrap text-gray lg:text-lg dark:text-white">
-                    {experience?.title || 'Sem título'}
+                    {experience?.title ? experience.title : 'Sem título'}
                   </h3>
                 </TableCell>
                 <TableCell className="max-w-[100px]">
                   <p className="text-small text-wrap">
-                    {experience?.description || 'Sem descrição'}
+                    {experience?.description
+                      ? experience.description
+                      : 'Sem descrição'}
                   </p>
                 </TableCell>
                 <TableCell className="max-w-[100px]">
                   <p className="text-wrap">
-                    {dateFormater(experience?.startedAt) || 'Sem data'}
+                    {experience?.startedAt
+                      ? dateFormater(experience.startedAt)
+                      : 'Sem data'}
                   </p>
                 </TableCell>
                 <TableCell className="max-w-[100px]">
                   <p className="text-wrap">
-                    {dateFormater(experience?.finishedAt) || 'Sem data'}
+                    {experience?.finishedAt
+                      ? dateFormater(experience.finishedAt)
+                      : 'Sem data'}
                   </p>
                 </TableCell>
                 <TableCell className="w-[50px]">
-                  <EditExperienceModal identifier={experience?.id || ''} />
+                  {experience && (
+                    <>
+                      <EditExperienceModal identifier={experience.id} />
+                    </>
+                  )}
                 </TableCell>
               </TableRow>
             ))}
