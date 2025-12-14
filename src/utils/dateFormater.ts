@@ -6,5 +6,9 @@ export default function dateFormater(date: string) {
     .format(new Date(date))
     .replace(/^\w/, (c) => c.toUpperCase());
 
+  if (!date) {
+    return null;
+  }
+
   return formatedDate;
 }

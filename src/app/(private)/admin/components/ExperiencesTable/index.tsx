@@ -34,17 +34,17 @@ export default async function ExperiencesTable() {
           <TableRow>
             <TableCell className="w-[100px] lg:w-[200px]">
               <h3 className="text-sm font-semibold text-wrap text-gray lg:text-lg dark:text-white">
-                {lastExperience?.title}
+                {lastExperience?.title || 'Sem título'}
               </h3>
             </TableCell>
             <TableCell className="max-w-[100px]">
               <p className="text-small text-wrap">
-                {lastExperience?.description}
+                {lastExperience?.description || 'Sem descrição'}
               </p>
             </TableCell>
             <TableCell className="max-w-[100px]">
               <p className="text-wrap">
-                {dateFormater(lastExperience?.startedAt! || 'Sem data')}
+                {dateFormater(lastExperience?.startedAt!) || 'Sem data'}
               </p>
             </TableCell>
             <TableCell className="max-w-[100px]">
@@ -62,26 +62,26 @@ export default async function ExperiencesTable() {
               >
                 <TableCell className="w-[100px] lg:w-[200px]">
                   <h3 className="text-sm font-semibold text-wrap text-gray lg:text-lg dark:text-white">
-                    {experience.title}
+                    {experience?.title || 'Sem título'}
                   </h3>
                 </TableCell>
                 <TableCell className="max-w-[100px]">
                   <p className="text-small text-wrap">
-                    {experience.description}
+                    {experience?.description || 'Sem descrição'}
                   </p>
                 </TableCell>
                 <TableCell className="max-w-[100px]">
                   <p className="text-wrap">
-                    {dateFormater(experience.startedAt)}
+                    {dateFormater(experience?.startedAt) || 'Sem data'}
                   </p>
                 </TableCell>
                 <TableCell className="max-w-[100px]">
                   <p className="text-wrap">
-                    {dateFormater(experience.finishedAt)}
+                    {dateFormater(experience?.finishedAt) || 'Sem data'}
                   </p>
                 </TableCell>
                 <TableCell className="w-[50px]">
-                  <EditExperienceModal identifier={experience.id} />
+                  <EditExperienceModal identifier={experience?.id || ''} />
                 </TableCell>
               </TableRow>
             ))}
