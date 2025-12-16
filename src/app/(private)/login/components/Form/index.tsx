@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { authenticate } from '../../actions/authenticate';
+import { authenticate } from '../../../../../utils/authenticate';
+import { redirect } from 'next/navigation';
 
 interface FormProps {
   children: React.ReactNode;
@@ -15,7 +16,9 @@ export default function Form({ children }: FormProps) {
     if (response?.error) {
       setError(response.error);
       setTimeout(() => setError(null), 10000);
+      return;
     }
+    redirect('/admin');
   };
 
   return (

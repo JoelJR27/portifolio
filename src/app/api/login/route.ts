@@ -4,6 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
     const body = await request.json()
+    const cookiesStore = await cookies()
 
     const { email, password } = body
 
@@ -24,9 +25,12 @@ export async function POST(request: NextRequest) {
         message: data.message || "Erro ao autenticar usuário."
     })
 
-    await cookies().then(response => response.set("token", data.token, {
-        expires: Date.now() + 1000 * 60 * 60 * 2
-    }))
+    cookiesStore.set("token", data.token, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "lax",
+        expires: new Date(Date.now() + 1000 * 60 * 60 * 2)
+    })
 
     return NextResponse.json({
         success: true,
