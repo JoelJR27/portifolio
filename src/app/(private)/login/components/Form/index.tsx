@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { authenticate } from '../../../../../utils/authenticate';
-import { redirect } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 interface FormProps {
   children: React.ReactNode;
@@ -12,13 +12,14 @@ export default function Form({ children }: FormProps) {
   const [error, setError] = useState<string | null>(null);
   const handle = async (formData: FormData) => {
     const response = await authenticate(formData);
+    const router = useRouter();
 
     if (response?.error) {
       setError(response.error);
       setTimeout(() => setError(null), 10000);
       return;
     }
-    redirect('/admin');
+    router.push('/admin');
   };
 
   return (
