@@ -9,10 +9,11 @@ interface FormProps {
 }
 
 export default function Form({ children }: FormProps) {
+  const router = useRouter();
   const [error, setError] = useState<string | null>(null);
+
   const handle = async (formData: FormData) => {
     const response = await authenticate(formData);
-    const router = useRouter();
 
     if (response?.error) {
       setError(response.error);
