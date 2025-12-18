@@ -18,7 +18,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       </Link>
       <ul className="flex flex-wrap items-center justify-center gap-4 pt-2 lg:justify-start">
         {technologiesList &&
-          technologiesList.map((item) => (
+          technologiesList.reverse().map((item) => (
             <li
               key={item.technology.id}
               className="flex flex-col items-center gap-1"

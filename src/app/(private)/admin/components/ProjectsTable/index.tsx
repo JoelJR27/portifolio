@@ -64,12 +64,28 @@ export default async function ProjectsTable({ projects }: ProjectsTableProps) {
                 </TableCell>
                 <TableCell>
                   <ul className="*:py-1">
-                    <li>
-                      <a href={project.githubLink}> GitHub</a>
-                    </li>
-                    <li>
-                      <a href={project.projectLink}>Demo</a>
-                    </li>
+                    {project.githubLink && (
+                      <li>
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={project.githubLink}
+                        >
+                          GitHub
+                        </a>
+                      </li>
+                    )}
+                    {project.projectLink && (
+                      <li>
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={project.projectLink}
+                        >
+                          Demo
+                        </a>
+                      </li>
+                    )}
                   </ul>
                 </TableCell>
                 <TableCell>
