@@ -48,16 +48,18 @@ export default async function ProjectPage({
                 )
               )}
           </ul>
-          <Image
-            src={
-              project.image?.imageLink ||
-              'https://ito-group.com/wp-content/uploads/2025/04/no-image.jpg'
-            }
-            alt={project.projectName ?? 'Imagem do projeto'}
-            width={800}
-            height={200}
-            className="rounded pt-5 transition-transform duration-75 hover:scale-101"
-          />
+          <Suspense fallback={<Loading />}>
+            <Image
+              src={
+                project.image?.imageLink ||
+                'https://ito-group.com/wp-content/uploads/2025/04/no-image.jpg'
+              }
+              alt={project.projectName ?? 'Imagem do projeto'}
+              width={800}
+              height={200}
+              className="rounded pt-5 transition-transform duration-75 hover:scale-101"
+            />
+          </Suspense>
           <div className="flex gap-4 self-start *:rounded *:bg-primary *:px-2 *:py-1 *:font-semibold">
             {project.githubLink && (
               <a
