@@ -10,12 +10,16 @@ import {
 import { Experience } from '@/types/Experience';
 import dateFormater from '@/utils/dateFormater';
 import EditExperienceModal from '../EditExperienceModal';
-import { fetchAllData } from '@/app/actions/fetchAllData';
 
-export default async function ExperiencesTable() {
-  const { experiences } = await fetchAllData();
-  const { data, lastExperience } = experiences;
+interface ExperiencesTableProps {
+  experiences: Experience[];
+  lastExperience: Experience | null;
+}
 
+export default async function ExperiencesTable({
+  experiences,
+  lastExperience
+}: ExperiencesTableProps) {
   return (
     <>
       <Table className="w-full pb-10 text-gray lg:justify-self-center lg:text-lg 2xl:w-8/10 dark:text-white">
@@ -60,8 +64,8 @@ export default async function ExperiencesTable() {
               )}
             </TableCell>
           </TableRow>
-          {data &&
-            data.map((experience: Experience) => (
+          {experiences &&
+            experiences.map((experience: Experience) => (
               <TableRow
                 key={experience.id}
                 className="*:text-center lg:*:text-start"

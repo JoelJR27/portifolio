@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Anton, Roboto_Flex } from 'next/font/google';
-import { ThemeProvider } from '@/components/ThemeProvider';
+import { ThemeProvider } from '@/providers/ThemeProvider';
 
 const anton = Anton({
   subsets: ['latin'],
@@ -57,7 +57,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+         {children}
         </ThemeProvider>
       </body>
     </html>

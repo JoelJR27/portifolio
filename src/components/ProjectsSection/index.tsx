@@ -1,11 +1,16 @@
 import ProjectCard from './ProjectCard';
 import { Braces } from 'lucide-react';
 import sectionIconsStyles from '@/utils/sectionIconsStyles';
-import { fetchAllData } from '@/app/actions/fetchAllData';
+import { Project } from '@/types/Project';
 
-export default async function ProjectsSection() {
-  const { projects } = await fetchAllData();
-  const { data } = projects;
+interface ProjectsSectionProps {
+  projects: Project[];
+}
+
+export default async function ProjectsSection({
+  projects
+}: ProjectsSectionProps) {
+
 
   //TODO: fazer animações com GSAP
   return (
@@ -17,8 +22,8 @@ export default async function ProjectsSection() {
         <Braces className={sectionIconsStyles} /> Projetos
       </h2>
 
-      {data &&
-        data.map((project) => (
+      {projects &&
+        projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
     </section>

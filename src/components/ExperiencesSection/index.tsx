@@ -2,12 +2,16 @@ import { BriefcaseBusiness } from 'lucide-react';
 import ExperienceCard from './ExperienceCard';
 import sectionIconsStyles from '@/utils/sectionIconsStyles';
 import { Experience } from '@/types/Experience';
-import { fetchAllData } from '@/app/actions/fetchAllData';
 
+interface ExperiencesSectionProps {
+  experiences: Experience[];
+  lastExperience: Experience | null
+}
 
-export default async function ExperiencesSection() {
-  const { experiences } = await fetchAllData();
-  const { data, lastExperience } = experiences;
+export default async function ExperiencesSection({
+  experiences,
+  lastExperience
+}: ExperiencesSectionProps) {
 
   return (
     <section
@@ -27,8 +31,8 @@ export default async function ExperiencesSection() {
         />
       )}
 
-      {data &&
-        data.map((experience: Experience) => (
+      {experiences &&
+        experiences.map((experience: Experience) => (
           <ExperienceCard key={experience.id} experience={experience} />
         ))}
     </section>

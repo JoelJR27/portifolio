@@ -10,12 +10,14 @@ import {
 import { Technology } from '@/types/Technology';
 import Image from 'next/image';
 import EditTechnologiesModal from '../EditTechnologiesModal';
-import { fetchAllData } from '@/app/actions/fetchAllData';
 
-export default async function TechnologiesTable() {
-  const { technologies } = await fetchAllData();
-  const { data } = technologies;
+interface TechnologiesTableProps {
+  technologies: Technology[];
+}
 
+export default async function TechnologiesTable({
+  technologies
+}: TechnologiesTableProps) {
   return (
     <>
       <Table className="w-full text-gray lg:justify-self-center lg:text-lg 2xl:w-8/10 dark:text-white">
@@ -31,8 +33,8 @@ export default async function TechnologiesTable() {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {data &&
-            data.map((technology: Technology) => (
+          {technologies &&
+            technologies.map((technology: Technology) => (
               <TableRow key={technology?.id || 'sem-id'}>
                 <TableCell className="w-[100px] text-center">
                   <Image
@@ -51,10 +53,14 @@ export default async function TechnologiesTable() {
                   </h3>
                 </TableCell>
                 <TableCell>
-                  <p className="text-center text-wrap">{technology?.id || 'Sem ID'}</p>
+                  <p className="text-center text-wrap">
+                    {technology?.id || 'Sem ID'}
+                  </p>
                 </TableCell>
                 <TableCell className="text-end">
-                  <EditTechnologiesModal identifier={technology?.id || 'sem-id'} />
+                  <EditTechnologiesModal
+                    identifier={technology?.id || 'sem-id'}
+                  />
                 </TableCell>
               </TableRow>
             ))}

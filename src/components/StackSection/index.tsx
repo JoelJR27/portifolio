@@ -1,12 +1,15 @@
-import { fetchAllData } from '@/app/actions/fetchAllData';
+import { Technology } from '@/types/Technology';
 import sectionIconsStyles from '@/utils/sectionIconsStyles';
 import { Globe } from 'lucide-react';
 import Image from 'next/image';
 
-export default async function StackSection() {
-  const { technologies } = await fetchAllData();
-  const { data } = technologies;
+interface StackSectionProps {
+  technologies: Technology[];
+}
 
+export default async function StackSection({
+  technologies
+}: StackSectionProps) {
   //TODO: fazer animações
   return (
     <section className="flex flex-col items-center lg:items-start" id="stack">
@@ -14,8 +17,8 @@ export default async function StackSection() {
         <Globe className={sectionIconsStyles} /> Tech Stack
       </h2>
       <ul className="flex flex-wrap justify-center gap-4 lg:justify-start">
-        {data &&
-          data.map((technology) => (
+        {technologies &&
+          technologies.map((technology) => (
             <li className="flex flex-col items-center p-2" key={technology.id}>
               <Image
                 src={technology.logo.imageLink}

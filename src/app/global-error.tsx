@@ -1,7 +1,7 @@
 'use client';
 
 import BackToMainPageButton from '@/components/BackToMainPageButton';
-import { ThemeProvider } from '@/components/ThemeProvider';
+import { ThemeProvider } from '@/providers/ThemeProvider';
 interface GlobalErrorProps {
   error: Error;
   reset: () => void;

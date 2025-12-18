@@ -11,12 +11,12 @@ import { Project } from '@/types/Project';
 import Image from 'next/image';
 import CreateProjectsForm from '../CreateProjectsForm';
 import EditProjectsModal from '../EditProjectsModal';
-import { fetchAllData } from '@/app/actions/fetchAllData';
 
+interface ProjectsTableProps {
+  projects: Project[];
+}
 
-export default async function ProjectsTable() {
-  const { projects } = await fetchAllData();
-  const { data } = projects;
+export default async function ProjectsTable({ projects }: ProjectsTableProps) {
   return (
     <>
       <Table className="w-full text-gray lg:justify-self-center lg:text-lg 2xl:w-8/10 dark:text-white">
@@ -34,8 +34,8 @@ export default async function ProjectsTable() {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {data &&
-            data.map((project: Project) => (
+          {projects &&
+            projects.map((project: Project) => (
               <TableRow key={project.id}>
                 <TableCell className="w-auto">
                   <h3 className="text-sm font-semibold text-wrap text-gray lg:text-lg dark:text-white">

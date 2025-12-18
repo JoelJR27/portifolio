@@ -2,9 +2,8 @@ import sectionIconsStyles from '@/utils/sectionIconsStyles';
 import { CircleQuestionMark, User } from 'lucide-react';
 
 export default function AboutMeSection() {
-  //TODO: fazer animações com GSAP
   return (
-    <section className="flex flex-col items-center gap-4 lg:items-start" id="about-me">
+    <section className="flex flex-col items-center gap-4 lg:items-start mb-20 h-auto" id="about-me">
       <h2 className="mb-6 flex items-center gap-2 font-semibold">
         <CircleQuestionMark className={sectionIconsStyles} /> Sobre mim
       </h2>
