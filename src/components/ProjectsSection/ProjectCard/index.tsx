@@ -13,7 +13,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <article className="flex flex-col gap-2">
       <Link href={{ pathname: `/project/${project.slug}` }}>
-        <h3 className="flex items-center gap-2 text-center font-anton text-h3 tracking-tight uppercase lg:text-start">
+        <h3 className="flex items-center justify-center gap-2 text-center font-anton text-h3 tracking-tight uppercase lg:justify-start">
           {project.projectName}
           <LoadingIcon />
         </h3>
