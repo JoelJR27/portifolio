@@ -5,14 +5,13 @@ import { Experience } from '@/types/Experience';
 
 interface ExperiencesSectionProps {
   experiences: Experience[];
-  lastExperience: Experience | null
+  lastExperience: Experience | null;
 }
 
 export default async function ExperiencesSection({
   experiences,
   lastExperience
 }: ExperiencesSectionProps) {
-
   return (
     <section
       className="flex flex-col items-center lg:items-start"
@@ -28,12 +27,17 @@ export default async function ExperiencesSection({
           key={lastExperience.id}
           isLastExperience
           experience={lastExperience}
+          index={0}
         />
       )}
 
       {experiences &&
-        experiences.map((experience: Experience) => (
-          <ExperienceCard key={experience.id} experience={experience} />
+        experiences.map((experience: Experience, index: number) => (
+          <ExperienceCard
+            key={experience.id}
+            experience={experience}
+            index={index + 1}
+          />
         ))}
     </section>
   );

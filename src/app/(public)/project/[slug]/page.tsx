@@ -1,5 +1,6 @@
 import Loading from '@/app/loading';
 import BackToMainPageButton from '@/components/BackToMainPageButton';
+import ScrollContainer from '@/components/ScrollContainer';
 import { ProjectsRepository } from '@/repositories/projects.repository';
 import { Technology } from '@/types/Technology';
 import Image from 'next/image';
@@ -13,7 +14,7 @@ export default async function ProjectPage({
   const { technologies } = project;
 
   return (
-    <>
+    <ScrollContainer>
       <header className="p-6">
         <BackToMainPageButton />
       </header>
@@ -82,6 +83,6 @@ export default async function ProjectPage({
           </div>
         </section>
       </Suspense>
-    </>
+    </ScrollContainer>
   );
 }

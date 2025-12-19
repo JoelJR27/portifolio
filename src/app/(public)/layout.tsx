@@ -1,7 +1,6 @@
 import Asidemenu from '@/components/Asidemenu';
 import AsidemenuProvider from '@/components/Asidemenu/AsidemenuProvider';
 import OpenMenuButton from '@/components/Asidemenu/OpenMenuButton';
-import Footer from '@/components/Footer';
 
 export default function PublicLayout({
   children
@@ -13,10 +12,7 @@ export default function PublicLayout({
       <AsidemenuProvider>
         <OpenMenuButton />
         <Asidemenu />
-        <main className="bg-background min-h-screen lg:px-25">
-          {children}
-          <Footer />
-        </main>
+        <main className="bg-background min-h-screen lg:px-25">{children}</main>
       </AsidemenuProvider>
     </>
   );
