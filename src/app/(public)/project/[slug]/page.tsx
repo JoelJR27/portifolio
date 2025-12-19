@@ -1,5 +1,5 @@
-import Loading from '@/app/loading';
 import BackToMainPageButton from '@/components/BackToMainPageButton';
+import LoadingIcon from '@/components/LoadingIcon';
 import ScrollContainer from '@/components/ScrollContainer';
 import { ProjectsRepository } from '@/repositories/projects.repository';
 import { Technology } from '@/types/Technology';
@@ -18,7 +18,7 @@ export default async function ProjectPage({
       <header className="p-6">
         <BackToMainPageButton />
       </header>
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<LoadingIcon />}>
         <section className="mx-auto flex max-w-3xl flex-col items-center gap-4 p-6">
           <h1 className="inline self-start border-b border-b-primary text-wrap text-gray dark:text-white">
             {project?.projectName || 'Projeto sem nome'}
@@ -36,7 +36,7 @@ export default async function ProjectPage({
                 }) => (
                   <li key={tech.id}>
                     <Image
-                      className="rounded lg:scale-125"
+                      className="rounded lg:scale-125 animate-pulse"
                       src={
                         tech.technology.logo?.imageLink ||
                         'https://ito-group.com/wp-content/uploads/2025/04/no-image.jpg'
@@ -49,7 +49,7 @@ export default async function ProjectPage({
                 )
               )}
           </ul>
-          <Suspense fallback={<Loading />}>
+          <Suspense fallback={<LoadingIcon />}>
             <Image
               src={
                 project.image?.imageLink ||

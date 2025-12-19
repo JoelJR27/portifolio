@@ -1,3 +1,4 @@
+import LoadingIcon from '@/components/LoadingIcon';
 import { Project } from '@/types/Project';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -12,8 +13,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <article className="flex flex-col gap-2">
       <Link href={{ pathname: `/project/${project.slug}` }}>
-        <h3 className="text-center font-anton text-h3 tracking-tight uppercase lg:text-start">
+        <h3 className="flex items-center gap-2 text-center font-anton text-h3 tracking-tight uppercase lg:text-start">
           {project.projectName}
+          <LoadingIcon />
         </h3>
       </Link>
       <ul className="flex flex-wrap items-center justify-center gap-4 pt-2 lg:justify-start">
