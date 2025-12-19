@@ -61,9 +61,9 @@ export default function AboutMeSection() {
         ref={textRef}
         className="border-b border-gray/10 pb-6 text-2xl lg:text-4xl dark:border-white/10"
       >
-        Há 1 ano, transformo ideias em produtos que realmente funcionam:
+        {/* Há 1 ano, transformo ideias em produtos que realmente funcionam:
         interfaces intuitivas, APIs estáveis e experiências que não quebram
-        quando o usuário mais precisa.
+        quando o usuário mais precisa. */}
       </p>
 
       <div className="grid-cols-2 divide-gray/10 *:py-2 xl:grid xl:divide-x-2 dark:divide-white/10">

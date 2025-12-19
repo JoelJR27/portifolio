@@ -1,6 +1,15 @@
+import gsap from 'gsap';
+import ScrollToPlugin from 'gsap/ScrollToPlugin';
+
+gsap.registerPlugin(ScrollToPlugin);
+
 export default function scrollToElement(id: string) {
-  const element = document.getElementById(id);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
-  }
+  gsap.to(window, {
+    duration: 1,
+    scrollTo: {
+      y: `#${id}`,
+      offsetY: 300
+    },
+    ease: 'power2.out'
+  });
 }

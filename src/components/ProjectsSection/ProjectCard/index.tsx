@@ -12,7 +12,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   //TODO: fazer animações com GSAP
   return (
     <article className="flex flex-col gap-2">
-      <Link href={{ pathname: `/project/${project.slug}` }}>
+      <Link
+        href={{ pathname: `/project/${project.slug}` }}
+        aria-label={project.projectName}
+        prefetch="auto"
+      >
         <h3 className="flex items-center justify-center gap-2 text-center font-anton text-h3 tracking-tight uppercase lg:justify-start">
           {project.projectName}
           <LoadingIcon />
