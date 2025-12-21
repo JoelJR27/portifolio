@@ -1,5 +1,4 @@
-import { ArrowRight } from 'lucide-react';
-import LinkButton from '../LinkButton';
+import HeroButtons from './HeroButtons';
 
 export default async function Hero() {
   return (
@@ -17,17 +16,7 @@ export default async function Hero() {
       <p>Construo aplicações web que unem lógica, precisão e experiência.</p>
 
       <div className="flex w-full justify-center gap-6">
-        <LinkButton href="projects" variant="primary">
-          Ver Projetos{' '}
-          <ArrowRight strokeWidth={3} size={18} className="ml-1 inline-block" />
-        </LinkButton>
-        <LinkButton
-          target="_blank"
-          href="mailto:devjoeljunior@gmail.com"
-          variant="outline"
-        >
-          Entre em contato
-        </LinkButton>
+        <HeroButtons />
       </div>
     </section>
   );
