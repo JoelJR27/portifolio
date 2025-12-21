@@ -36,7 +36,7 @@ export default async function ProjectPage({
                 }) => (
                   <li key={tech.id}>
                     <Image
-                      className="rounded lg:scale-125 animate-pulse"
+                      className="animate-pulse rounded lg:scale-125"
                       src={
                         tech.technology.logo?.imageLink ||
                         'https://ito-group.com/wp-content/uploads/2025/04/no-image.jpg'
@@ -63,22 +63,28 @@ export default async function ProjectPage({
           </Suspense>
           <div className="flex gap-4 self-start *:rounded *:bg-primary *:px-2 *:py-1 *:font-semibold">
             {project.githubLink && (
-              <a
-                href={project?.githubLink || '#'}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
+              <>
+                <a
+                  href={project?.githubLink || '#'}
+                  style={{ backgroundColor: 'transparent', fontSize: '1rem' }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+              </>
             )}
             {project.projectLink && (
-              <a
-                href={project?.projectLink || '#'}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Demo
-              </a>
+              <>
+                <a
+                  href={project?.projectLink || '#'}
+                  style={{ backgroundColor: 'transparent', fontSize: '1rem' }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Demo
+                </a>
+              </>
             )}
           </div>
         </section>
