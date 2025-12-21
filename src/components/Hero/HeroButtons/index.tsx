@@ -10,7 +10,7 @@ export default function HeroButtons() {
       <Button
         className={styles}
         size="lg"
-        onClick={() => scrollToElement('#projects')}
+        onClick={() => scrollToElement('projects')}
       >
         Ver projetos{' '}
         <ArrowRight strokeWidth={3} size={18} className="ml-1 inline-block" />
