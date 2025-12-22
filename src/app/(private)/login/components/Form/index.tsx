@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { authenticate } from '../../../../../utils/authenticate';
+import { authenticate } from '../../../../actions/authenticate';
 
 interface FormProps {
   children: React.ReactNode;

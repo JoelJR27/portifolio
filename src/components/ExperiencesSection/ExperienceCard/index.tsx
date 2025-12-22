@@ -1,5 +1,5 @@
 'use client';
-import { animateExperienceCard } from '@/lib/animations/experiencesAnimation';
+import { animateExperienceCard } from '@/lib/experiencesAnimation';
 import { Experience } from '@/types/Experience';
 import dateFormater from '@/utils/dateFormater';
 import { useGSAP } from '@gsap/react';
