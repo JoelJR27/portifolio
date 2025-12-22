@@ -38,11 +38,13 @@ export default function ScrollContainer({ children }: ScrollContainerProps) {
   }, []);
 
   return (
-    <div ref={wrapperRef} id="smooth-wrapper">
-      <main ref={contentRef} id="smooth-content">
-        {children}
-        <Footer />
-      </main>
-    </div>
+    <>
+      <div ref={wrapperRef} id="smooth-wrapper">
+        <div ref={contentRef} id="smooth-content">
+          {children}
+          <Footer />
+        </div>
+      </div>
+    </>
   );
 }
