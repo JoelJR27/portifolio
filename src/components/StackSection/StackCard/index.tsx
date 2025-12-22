@@ -5,7 +5,7 @@ import gsap from 'gsap';
 import { ScrollTrigger, SplitText } from 'gsap/all';
 import { useGSAP } from '@gsap/react';
 import { useRef } from 'react';
-import { animateStackCard } from '@/lib/animations/stackAnimations';
+import { animateStackCard } from '@/lib/stackAnimations';
 gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
 
 interface StackCardProps {
