@@ -32,7 +32,7 @@ export async function authenticate(formData: ZodSafeParseSuccess<LoginSchema>) {
     if (res.ok && data.token) {
         cookiesStore.set("token", data.token, {
             httpOnly: true,
-            secure: process.env.NODE_ENV === "production",
+            secure: true,
             sameSite: "none",
             expires: new Date(Date.now() + 1000 * 60 * 60 * 2)
         })
