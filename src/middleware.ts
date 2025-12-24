@@ -1,36 +1,51 @@
+import { jwtVerify } from "jose";
 import { MiddlewareConfig, NextRequest, NextResponse } from "next/server";
 
-const publicRoutes = [
-  { path: "/login", whenAuthenticated: "redirect" },
-] as const;
+const PRIVATE_ROUTES = ["/admin"];
+const PUBLIC_ROUTES = ["/login"];
 
 const REDIRECT_WHEN_NOT_AUTHENTICATED = "/login";
+const REDIRECT_WHEN_AUTHENTICATED = "/admin";
 
-export function middleware(request: NextRequest) {
-  const path = request.nextUrl.pathname;
+const SECRET_KEY = new TextEncoder().encode(
+  process.env.MY_SECRET_KEY
+);
 
-  const publicRoute = publicRoutes.find((route) => route.path === path);
+export async function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+  const token = request.cookies.get("token")?.value;
 
-  const authToken = request.cookies.get("token");
+  const isPrivateRoute = PRIVATE_ROUTES.some(route =>
+    pathname.startsWith(route)
+  );
 
-  if (!authToken && !publicRoute) {
+  const isPublicRoute = PUBLIC_ROUTES.includes(pathname);
+
+  if (!token && isPrivateRoute) {
     const redirectUrl = request.nextUrl.clone();
-
     redirectUrl.pathname = REDIRECT_WHEN_NOT_AUTHENTICATED;
-
     return NextResponse.redirect(redirectUrl);
   }
 
-  if (
-    authToken &&
-    publicRoute &&
-    publicRoute.whenAuthenticated === "redirect"
-  ) {
-    const redirectUrl = request.nextUrl.clone();
+  if (token) {
+    try {
+      await jwtVerify(token, SECRET_KEY);
 
-    redirectUrl.pathname = "/admin";
+      if (isPublicRoute) {
+        const redirectUrl = request.nextUrl.clone();
+        redirectUrl.pathname = REDIRECT_WHEN_AUTHENTICATED;
+        return NextResponse.redirect(redirectUrl);
+      }
 
-    return NextResponse.redirect(redirectUrl);
+      return NextResponse.next();
+    } catch (error) {
+      const response = NextResponse.redirect(
+        new URL(REDIRECT_WHEN_NOT_AUTHENTICATED, request.url)
+      );
+
+      response.cookies.delete("token");
+      return response;
+    }
   }
 
   return NextResponse.next();
