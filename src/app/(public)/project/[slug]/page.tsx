@@ -11,7 +11,7 @@ export default async function ProjectPage({
 }: PageProps<'/project/[slug]'>) {
   const { slug } = await params;
   const project = await ProjectsRepository.getBySlug(slug);
-  const { technologies } = project;
+  const technologies = [...project.technologies].reverse();
 
   return (
     <ScrollContainer>
@@ -25,29 +25,27 @@ export default async function ProjectPage({
           </h1>
           <p className="px-0 py-8">{project?.description || 'Sem descrição'}</p>
           <ul className="flex gap-4 self-start *:w-6">
-            {technologies
-              .reverse()
-              .map(
-                (tech: {
-                  id: string;
-                  projectId: string;
-                  technologyId: string;
-                  technology: Technology;
-                }) => (
-                  <li key={tech.id}>
-                    <Image
-                      className="animate-pulse rounded lg:scale-125"
-                      src={
-                        tech.technology.logo?.imageLink ||
-                        'https://ito-group.com/wp-content/uploads/2025/04/no-image.jpg'
-                      }
-                      alt={`${tech.technology.name || 'Sem nome'} logo`}
-                      width={50}
-                      height={50}
-                    />
-                  </li>
-                )
-              )}
+            {technologies.map(
+              (tech: {
+                id: string;
+                projectId: string;
+                technologyId: string;
+                technology: Technology;
+              }) => (
+                <li key={tech.id}>
+                  <Image
+                    className="rounded lg:scale-125"
+                    src={
+                      tech.technology.logo?.imageLink ||
+                      'https://ito-group.com/wp-content/uploads/2025/04/no-image.jpg'
+                    }
+                    alt={`${tech.technology.name || 'Sem nome'} logo`}
+                    width={50}
+                    height={50}
+                  />
+                </li>
+              )
+            )}
           </ul>
           <Suspense fallback={<LoadingIcon />}>
             <Image

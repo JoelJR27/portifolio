@@ -15,25 +15,29 @@ const robotoFlex = Roboto_Flex({
 
 export const metadata: Metadata = {
   title: 'Portifólio | Joel Júnior',
-  description: 'Portifólio profissional do desenvolvedor Joel Júnior.',
+  description: 'Portifólio profissional do desenvolvedor joel júnior.',
   keywords: [
-    'Portifólio',
-    'Desenvolvedor Web',
-    'Frontend',
-    'Backend',
-    'Fullstack',
-    'React',
-    'Next.js',
-    'Node.js',
-    'JavaScript',
-    'TypeScript'
+    'portifolio',
+    'joel junior',
+    'joel',
+    'junior',
+    'dev',
+    'desenvolvedor web',
+    'frontend',
+    'backend',
+    'fullstack',
+    'react',
+    'next.js',
+    'node.js',
+    'javascript',
+    'typescript'
   ],
   authors: [
-    { name: 'Joel Júnior', url: 'https://linkedin.com/in/joeljunior27' }
+    { name: 'joel júnior', url: 'https://linkedin.com/in/joeljunior27' }
   ],
-  creator: 'Joel Júnior',
-  publisher: 'Joel Júnior',
-  category: 'Technology',
+  creator: 'joel júnior',
+  publisher: 'joel júnior',
+  category: 'technology',
   icons: {
     icon: '/favicon.ico'
   }
