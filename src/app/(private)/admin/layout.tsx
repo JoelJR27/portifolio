@@ -9,7 +9,7 @@ export default function AdminLayout({
 }>) {
   return (
     <>
-      <header className="bg-dark-gray border-b border-b-primary/10 px-6 py-4">
+      <header className="border-b border-b-primary/40 bg-white px-6 py-4 dark:bg-gray">
         <nav>
           <ul className="flex items-center justify-between">
             <li className="flex items-center">
@@ -22,7 +22,9 @@ export default function AdminLayout({
           </ul>
         </nav>
       </header>
-      <main className="min-h-screen w-full bg-white dark:bg-gray">{children}</main>
+      <main className="min-h-screen w-full bg-white dark:bg-gray">
+        {children}
+      </main>
     </>
   );
 }

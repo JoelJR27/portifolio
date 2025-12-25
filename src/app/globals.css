@@ -161,7 +161,7 @@
 }
 
 :root {
-  --background: oklch(1.00 0 0);
+  --background: #dee5e5;
   --foreground: oklch(0.13 0 0);
   --card: oklch(0.92 0.01 196.80);
   --card-foreground: oklch(0.13 0 0);
@@ -176,7 +176,7 @@
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.20 0 0);
   --destructive: oklch(0.57 0.23 24.79);
-  --border: oklch(0.92 0 0);
+  --border: oklch(0.75 0.21 149.85);
   --input: oklch(0.92 0 0);
   --ring: oklch(0.71 0 0);
   --chart-1: oklch(0.65 0.22 36.85);
