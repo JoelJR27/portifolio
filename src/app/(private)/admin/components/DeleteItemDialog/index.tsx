@@ -63,7 +63,9 @@ export default function DeleteItemDialog({
             }
             className="flex w-full flex-col gap-2"
           >
-            <p className="p-0 text-sm">Digite abaixo "quero-deletar"</p>
+            <p className="p-0 text-sm">
+              Digite abaixo &ldquo;quero-deletar&rdquo;
+            </p>
             <Input id="delete-item" {...register('delete')} />
             {errors.delete && (
               <ErrorMessage>{errors.delete.message}</ErrorMessage>
@@ -75,7 +77,11 @@ export default function DeleteItemDialog({
                 disabled={!isValid}
                 aria-disabled={!isValid}
               >
-                {isSubmitting ? <Loader2 className='animate-spin' /> : 'Confirmar exclusão'}
+                {isSubmitting ? (
+                  <Loader2 className="animate-spin" />
+                ) : (
+                  'Confirmar exclusão'
+                )}
               </Button>
               <DialogClose asChild>
                 <Button

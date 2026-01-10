@@ -15,7 +15,7 @@ import {
 } from '@/components/ui/sheet';
 import { Textarea } from '@/components/ui/textarea';
 import { Toggle } from '@/components/ui/toggle';
-import { editProjectSchema } from '@/lib/schemas';
+import { EditProjectSchema, editProjectSchema } from '@/lib/schemas';
 import { Project } from '@/types/Project';
 import { Technology } from '@/types/Technology';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -61,7 +61,7 @@ export default function EditProjectForm({
     }
   });
 
-  async function onSubmit(data: any) {
+  async function onSubmit(data: EditProjectSchema) {
     const parsed = editProjectSchema.parse(data);
 
     const payload = getDirtyValues(dirtyFields, parsed);
