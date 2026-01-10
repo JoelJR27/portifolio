@@ -1,7 +1,6 @@
 'use client';
 
 import LogoutButton from '@/app/(private)/admin/components/LogoutButton';
-import BackToMainPageButton from '@/components/BackToMainPageButton';
 import {
   Sidebar,
   SidebarContent,

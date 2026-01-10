@@ -38,7 +38,7 @@ export async function middleware(request: NextRequest) {
       }
 
       return NextResponse.next();
-    } catch (error) {
+    } catch {
       const response = NextResponse.redirect(
         new URL(REDIRECT_WHEN_NOT_AUTHENTICATED, request.url)
       );

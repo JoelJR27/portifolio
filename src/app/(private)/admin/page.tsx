@@ -1,9 +1,3 @@
-import { Terminal } from 'lucide-react';
-import TechnologiesTable from './components/TechnologiesTable';
-import ProjectsTable from './components/ProjectsTable';
-import ExperiencesTable from './components/ExperiencesTable';
-import CreateTechnologyForm from './components/CreateTechnologyForm';
-import CreateExperienceForm from './components/CreateExperienceForm';
 import { getPortfolioData } from '@/services/portifolio.service';
 import { Suspense } from 'react';
 import Loading from '@/app/loading';

@@ -1,4 +1,3 @@
-import { ModeToggle } from '@/components/ModeToggle';
 import Link from 'next/link';
 
 export default function NotFound() {
