@@ -10,7 +10,7 @@ import {
 import { Project } from '@/types/Project';
 import Image from 'next/image';
 import CreateProjectsForm from '../CreateProjectsForm';
-import EditProjectsModal from '../EditProjectsModal';
+import EditProjectsModal from '../EditProjectForm';
 
 interface ProjectsTableProps {
   projects: Project[];

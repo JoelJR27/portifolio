@@ -14,7 +14,7 @@ export default async function AdminPage() {
   return (
     <Suspense fallback={<Loading />}>
       <section className="relative flex min-h-screen flex-col items-center px-0 py-10 text-white lg:px-16 lg:py-20">
-        <h1 className="mb-5 flex items-center gap-4 tracking-wider">
+        {/* <h1 className="mb-5 flex items-center gap-4 tracking-wider">
           <span className="animate-pulse">
             <Terminal style={{ color: 'var(--color-primary)' }} size={40} />
           </span>
@@ -29,7 +29,7 @@ export default async function AdminPage() {
             lastExperience={lastExperience}
           />
           <CreateExperienceForm />
-        </section>
+        </section> */}
       </section>
     </Suspense>
   );

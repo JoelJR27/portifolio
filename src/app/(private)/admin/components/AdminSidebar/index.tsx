@@ -1,6 +1,7 @@
 'use client';
 
 import LogoutButton from '@/app/(private)/admin/components/LogoutButton';
+import BackToMainPageButton from '@/components/BackToMainPageButton';
 import {
   Sidebar,
   SidebarContent,
@@ -48,7 +49,7 @@ export default function AdminSidebar() {
     <Sidebar>
       <SidebarHeader className="p-6">
         <h2 className="text-md flex items-center gap-2 font-roboto-flex text-gray dark:text-white">
-          Admin panel 
+          Admin panel
         </h2>
       </SidebarHeader>
       <SidebarContent>

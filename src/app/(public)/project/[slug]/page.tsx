@@ -20,11 +20,11 @@ export default async function ProjectPage({
       </header>
       <Suspense fallback={<LoadingIcon />}>
         <section className="mx-auto flex max-w-3xl flex-col items-center gap-4 p-6">
-          <h1 className="inline self-start border-b border-b-primary text-wrap text-gray dark:text-white">
+          <h1 className="inline text-center border-b border-b-primary text-wrap text-gray dark:text-white lg:text-start lg:self-start">
             {project?.projectName || 'Projeto sem nome'}
           </h1>
           <p className="px-0 py-8">{project?.description || 'Sem descrição'}</p>
-          <ul className="flex gap-4 self-start *:w-6">
+          <ul className="flex gap-4 lg:self-start *:w-6">
             {technologies.map(
               (tech: {
                 id: string;
@@ -56,7 +56,7 @@ export default async function ProjectPage({
               alt={project.projectName ?? 'Imagem do projeto'}
               width={800}
               height={200}
-              className="rounded pt-5 transition-transform duration-75 hover:scale-101"
+              className="rounded pt-5 transition-transform duration-400 hover:scale-101"
             />
           </Suspense>
           <div className="flex gap-4 self-start *:rounded *:bg-primary *:px-2 *:py-1 *:font-semibold">

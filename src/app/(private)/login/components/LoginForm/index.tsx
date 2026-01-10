@@ -11,13 +11,11 @@ import { Checkbox } from '@/components/ui/checkbox';
 import ErrorMessage from '@/components/ErrorMessage';
 import { authenticate } from '@/app/actions/authenticate';
 import { Loader } from 'lucide-react';
-import { useRouter } from 'next/navigation';
 
 export default function LoginForm() {
   const [isChecked, setIsChecked] = useState<boolean>(false);
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [errorOnAuth, setErrorOnAuth] = useState<string | undefined>(undefined);
-  const router = useRouter();
   const { reset, register, handleSubmit, formState } = useForm({
     resolver: zodResolver(loginSchema)
   });

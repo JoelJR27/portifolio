@@ -6,7 +6,7 @@ import LoadingIcon from '../LoadingIcon';
 export default function BackToMainPageButton() {
   return (
     <Link
-      className="group mt-2 flex items-center gap-1 text-lg text-gray underline-offset-4 hover:underline dark:text-white"
+      className="group flex items-center gap-1 text-lg text-gray underline-offset-4 hover:underline dark:text-white"
       href="/"
       prefetch={false}
       onClick={(e) => {

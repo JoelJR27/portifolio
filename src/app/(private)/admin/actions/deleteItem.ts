@@ -3,19 +3,10 @@
 import { revalidateTag } from "next/cache";
 
 export async function deleteItem(endpoint: string, identifier: string, tagToRevalidate: string) {
-    try {
-        const response = await fetch(`${process.env.API_URL}/${endpoint}/${identifier}`, {
-            method: "DELETE",
-            headers: {
-                "Content-Type": "application/json",
-            },
-        });
 
-        const data = await response.json();
-        revalidateTag(tagToRevalidate)
+    await fetch(`${process.env.API_URL}/${endpoint}/${identifier}`, {
+        method: "DELETE",
+    });
 
-        return data
-    } catch (error: unknown) {
-        console.error(error)
-    }
+    revalidateTag(tagToRevalidate)
 }

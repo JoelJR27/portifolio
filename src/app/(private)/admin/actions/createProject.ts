@@ -1,30 +1,20 @@
 'use server'
 
+import { CreateProjectSchema } from "@/lib/schemas";
 import { revalidateTag } from "next/cache";
+import { ZodSafeParseSuccess } from "zod";
 
-export async function createProject(formData: FormData) {
-    const projectName = formData.get('projectName') as string;
+export async function createProject(parsedData: ZodSafeParseSuccess<CreateProjectSchema>) {
 
-    const slug = formData.get('slug') as string;
+    const {
+        data: { projectName, slug, description, projectLink, githubLink,
+            image: {
+                name, imageLink
+            },
+            technologyIds }
+    } = parsedData
 
-    const description = formData.get('description') as string;
-
-    const projectLink = formData.get('projectLink') as string;
-
-    const githubLink = formData.get('githubLink') as string;
-
-    const projectImageName = formData.get('projectImageName') as string;
-
-    const imageLink = formData.get('imageLink') as string;
-
-    const technologies = formData.get('technologies') as string;
-
-    const techArray = technologies
-        .split(',')
-        .map((tech) => tech.trim())
-        .filter((tech) => tech !== '');
-
-   await fetch(`${process.env.API_URL}/projects`, {
+    await fetch(`${process.env.API_URL}/projects`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -36,10 +26,10 @@ export async function createProject(formData: FormData) {
             projectLink,
             githubLink,
             image: {
-                name: projectImageName,
+                name,
                 imageLink
             },
-            technologyIds: techArray
+            technologyIds
         })
     });
 
