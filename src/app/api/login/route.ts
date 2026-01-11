@@ -1,4 +1,3 @@
-
 import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 
@@ -8,7 +7,7 @@ export async function POST(request: NextRequest) {
 
     const { email, password } = body
 
-    const res = await fetch(`${process.env.API_URL}/login`, {
+    const response = await fetch(`${process.env.API_URL}/login`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -19,7 +18,7 @@ export async function POST(request: NextRequest) {
         body: JSON.stringify({ email, password })
     })
 
-    const data = await res.json()
+    const data = await response.json()
 
     if (!data.token) return NextResponse.json({
         message: data.message || "Erro ao autenticar usuário."

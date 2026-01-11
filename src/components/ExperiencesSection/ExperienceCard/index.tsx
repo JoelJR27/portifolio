@@ -31,7 +31,7 @@ export default function ExperienceCard({
 
     return () => ctx.revert();
   }, [index]);
-  //TODO: fazer animações com GSAP
+
   return (
     <article ref={cardRef} className="my-4 will-change-transform">
       <h3 className="text-center font-anton text-h3 tracking-tight uppercase lg:text-start">

@@ -22,7 +22,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { CheckCircle2Icon, Circle, Loader, PlusIcon } from 'lucide-react';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { createProject } from '../../actions/createProject';
+import { createProject } from '../../actions/projects/createProject';
 
 interface CreateProjectFormProps {
   technologies: Technology[];

@@ -23,7 +23,7 @@ import { Circle, Loader2, MoreHorizontal, Pencil } from 'lucide-react';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import DeleteItemDialog from '../DeleteItemDialog';
-import { editProjectAction } from '../../actions/editProjects';
+import { editProjectAction } from '../../actions/projects/editProjects';
 import { getDirtyValues } from '@/utils/getDirtyValues';
 
 interface EditProjectFormProps {

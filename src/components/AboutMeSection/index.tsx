@@ -26,7 +26,7 @@ export default function AboutMeSection() {
           gsap.to(textRef.current, {
             duration: 2.5,
             scrambleText: {
-              text: 'Há 1 ano, transformo ideias em produtos que realmente funcionam: interfaces intuitivas, APIs estáveis e experiências que não quebram quando o usuário mais precisa.',
+              text: 'Há 1 ano, transformo ideias em produtos que realmente funcionam: interfaces intuitivas e experiências que não quebram quando o usuário mais precisa.',
               chars:
                 '01!@#$%¨&*()-_=+[]{};:.,<>?/\\|`^~ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
               speed: 0.8,
@@ -60,11 +60,7 @@ export default function AboutMeSection() {
       <p
         ref={textRef}
         className="border-b border-gray/10 pb-6 text-2xl lg:text-4xl dark:border-white/10"
-      >
-        {/* Há 1 ano, transformo ideias em produtos que realmente funcionam:
-        interfaces intuitivas, APIs estáveis e experiências que não quebram
-        quando o usuário mais precisa. */}
-      </p>
+      ></p>
 
       <div className="grid-cols-2 divide-gray/10 *:py-2 xl:grid xl:divide-x-2 dark:divide-white/10">
         <h2 className="flex items-center justify-center gap-2 text-center font-anton text-h3 lg:justify-start xl:justify-center">
@@ -74,12 +70,13 @@ export default function AboutMeSection() {
 
         <div className="*:text-wrap lg:*:px-2 xl:*:px-6">
           <p>
-            Sou desenvolvedor fullstack e, antes de qualquer linha de código,
+            Sou desenvolvedor front-end e, antes de qualquer linha de código,
             gosto de entender o propósito por trás do que estou construindo.
           </p>
           <p>
             Meu foco é entregar aplicações modernas, escaláveis e tranquilas de
-            se usar, porque tecnologia boa é aquela que você esquece que existe.
+            se usar, porque tecnologia boa é aquela que você usa sem se
+            preocupar com detalhes técnicos.
           </p>
         </div>
       </div>

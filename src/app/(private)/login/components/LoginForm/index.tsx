@@ -14,28 +14,26 @@ import { Loader } from 'lucide-react';
 
 export default function LoginForm() {
   const [isChecked, setIsChecked] = useState<boolean>(false);
-  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [errorOnAuth, setErrorOnAuth] = useState<string | undefined>(undefined);
-  const { reset, register, handleSubmit, formState } = useForm({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting }
+  } = useForm({
     resolver: zodResolver(loginSchema)
   });
 
-  const { errors } = formState;
-
   async function onSubmit(data: LoginSchema) {
     const parsedData = loginSchema.safeParse(data);
+    
     if (!parsedData.success) return;
-
-    setIsSubmitting(true);
     setErrorOnAuth(undefined);
 
-    try {
-      const response = await authenticate(parsedData);
-      if (!response?.success) return setErrorOnAuth(response?.message);
-      window.location.href = '/admin';
-    } finally {
-      setIsSubmitting(false);
-    }
+    const response = await authenticate(parsedData);
+
+    if (!response?.success) return setErrorOnAuth(response?.message);
+
+    window.location.href = '/admin';
   }
 
   return (
@@ -94,18 +92,7 @@ export default function LoginForm() {
         )}
       </div>
       {errorOnAuth && <ErrorMessage>{errorOnAuth}</ErrorMessage>}
-      <footer className="flex justify-between py-1">
-        <Button
-          variant={'ghost'}
-          className="bg-alert"
-          onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
-            event.preventDefault();
-            setErrorOnAuth(undefined);
-            reset();
-          }}
-        >
-          Cancelar
-        </Button>
+      <footer className="flex justify-end py-1">
         <Button disabled={isSubmitting} type="submit">
           {isSubmitting ? <Loader className="animate-spin" /> : 'Enviar'}
         </Button>

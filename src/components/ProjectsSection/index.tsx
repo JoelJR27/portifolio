@@ -10,7 +10,6 @@ interface ProjectsSectionProps {
 export default async function ProjectsSection({
   projects
 }: ProjectsSectionProps) {
-  //TODO: fazer animações com GSAP
   return (
     <section
       className="flex flex-col items-center gap-4 lg:items-start"
