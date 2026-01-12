@@ -1,34 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portifólio Profissional
 
-## Getting Started
+![Logo desenvolvedor Joel Júnior](./src/public/logo.png)
 
-First, run the development server:
+![GitHub License](https://img.shields.io/github/license/JoelJR27/portifolio)
+![GitHub Created At](https://img.shields.io/github/created-at/JoelJR27/portifolio)
+![GitHub Repo stars](https://img.shields.io/github/stars/JoelJR27/portifolio)
+![Static Badge](https://img.shields.io/badge/STATUS-EM_DESENVOLVIMENTO-yellow)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Deploy da aplicação
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[https://portifolio-joel-junior.vercel.app/](https://portifolio-joel-junior.vercel.app/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Índice
 
-## Learn More
+- [Descrição do Projeto](#descrição-do-projeto)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Funcionalidades do Projeto](#funcionalidades-do-projeto)
+- [Licença](#licença)
 
-To learn more about Next.js, take a look at the following resources:
+## Descrição do Projeto
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Este projeto é um portfólio profissional desenvolvido por Joel Júnior, com o objetivo de apresentar suas habilidades, experiências e projetos realizados na área de desenvolvimento web. O portfólio é uma vitrine digital que permite aos visitantes conhecerem melhor o trabalho do desenvolvedor.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tecnologias Utilizadas
 
-## Deploy on Vercel
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- GSAP
+- Zod
+- React Hook Form
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Funcionalidades do Projeto
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `Apresentação de projetos`: O portfólio exibe uma seção de projetos desenvolvidos por mim, incluindo descrições, imagens, tecnologias utilizadas e links para os repositórios no GitHub.
+- `Experiências Profissionais`: Uma seção que detalha minhas experiências anteriores, cargos ocupados e responsabilidades desempenhadas.
+- `Tecnologias Dominadas`: Uma lista das principais tecnologias e ferramentas que utilizo no meu dia a dia como desenvolvedor.
+- `Seção Sobre Mim`: Uma seção dedicada a apresentar minha trajetória profissional, habilidades técnicas e interesses na área de desenvolvimento web.
+
+## Licença
+
+The MIT License (MIT)
+
+Copyright ©️ 2026 - Portifólio Joel Júnior
