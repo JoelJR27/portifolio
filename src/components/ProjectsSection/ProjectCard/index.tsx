@@ -3,6 +3,7 @@ import LoadingIcon from '@/components/LoadingIcon';
 import { Project } from '@/types/Project';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { ArrowUpRightFromSquareIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRef } from 'react';
@@ -70,9 +71,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       >
         <h3
           ref={titleRef}
-          className="flex items-center justify-center gap-2 text-center font-anton text-h3 tracking-tight uppercase lg:justify-start"
+          className="flex items-center justify-center gap-4 text-center font-anton text-h3 tracking-tight uppercase lg:justify-start"
         >
           {project.projectName}
+          <ArrowUpRightFromSquareIcon size={16} />
           <LoadingIcon />
         </h3>
       </Link>
