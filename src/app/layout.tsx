@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Anton, Roboto_Flex } from 'next/font/google';
 import { ThemeProvider } from '@/providers/ThemeProvider';
+import { TooltipProvider } from '@/components/ui/tooltip';
 
 const anton = Anton({
   subsets: ['latin'],
@@ -61,7 +62,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <TooltipProvider>{children}</TooltipProvider>
         </ThemeProvider>
       </body>
     </html>

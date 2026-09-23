@@ -11,7 +11,7 @@ export async function api<T>(
         method = 'GET',
         body,
         tags,
-        cache = 'force-cache'
+        
     }: FetchOptions = {}
     
 ): Promise<T> {
@@ -21,7 +21,6 @@ export async function api<T>(
             'Content-Type': 'application/json'
         },
         body: body ? JSON.stringify(body) : undefined,
-        cache,
         next: tags ? { tags } : undefined
     })
 

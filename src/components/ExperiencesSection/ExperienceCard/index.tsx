@@ -1,4 +1,9 @@
 'use client';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger
+} from '@/components/ui/tooltip';
 import { animateExperienceCard } from '@/lib/experiencesAnimation';
 import { Experience } from '@/types/Experience';
 import dateFormater from '@/utils/dateFormater';
@@ -33,14 +38,21 @@ export default function ExperienceCard({
   }, [index]);
 
   return (
+    // TODO: Refatorar todo o frontend e recriar a API
     <article ref={cardRef} className="my-4 will-change-transform">
       <h3 className="text-center font-anton text-h3 tracking-tight uppercase lg:text-start">
         {experience.title}
       </h3>
 
       <p className="text-sm text-gray/80">
-        {dateFormater(experience.startedAt)} –{' '}
-        {isLastExperience ? 'Presente' : dateFormater(experience.finishedAt)}
+        <strong className="font-semibold">
+          {dateFormater(experience.startedAt)} –{' '}
+          {isLastExperience ? 'Presente' : dateFormater(experience.finishedAt)}
+        </strong>
+      </p>
+
+      <p className="text-justify text-sm leading-6 lg:max-w-1/2">
+        {experience.description}
       </p>
     </article>
   );
