@@ -14,7 +14,7 @@ export default async function ExperiencesSection({
 }: ExperiencesSectionProps) {
   return (
     <section
-      className="flex flex-col items-center lg:items-start mb-8"
+      className="flex flex-col items-center lg:items-start mb-8 h-auto"
       id="experiences"
     >
       <h2 className="mb-12 flex items-center gap-2 text-center font-semibold lg:text-start">
