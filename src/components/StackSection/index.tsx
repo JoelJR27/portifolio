@@ -11,7 +11,7 @@ export default async function StackSection({
   technologies
 }: StackSectionProps) {
   return (
-    <section className="flex flex-col items-center lg:items-start" id="stack">
+    <section className="flex flex-col items-center justify-center lg:items-start" id="stack">
       <h2 className="flex items-center gap-2 font-semibold">
         <Globe className={sectionIconsStyles} /> Tech Stack
       </h2>
