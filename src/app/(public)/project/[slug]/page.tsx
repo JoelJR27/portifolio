@@ -19,7 +19,7 @@ export default async function ProjectPage({
         <BackToMainPageButton />
       </header>
       <Suspense fallback={<LoadingIcon />}>
-        <section className="mx-auto flex max-w-3xl flex-col items-center gap-4 p-6">
+        <section className="mx-auto h-auto flex max-w-3xl flex-col items-center gap-4 p-6">
           <h1 className="inline text-center border-b border-b-primary text-wrap text-gray dark:text-white lg:text-start lg:self-start">
             {project?.projectName || 'Projeto sem nome'}
           </h1>
